@@ -37,7 +37,7 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
 
-# 스포츠 시합 매칭 앱 '구할래' ADS
+# 스포츠 시합 매칭 앱 'TeamNine(팀구)' ADS
 
 ### 사용자가 원하는 운동을, 원하는 시간에, 원하는 장소에서 즐길 수 있도록 시합을 매칭해주는 앱
 ---
