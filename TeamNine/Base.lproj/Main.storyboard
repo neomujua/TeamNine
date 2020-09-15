@@ -71,7 +71,7 @@
         <!--팀리스트-->
         <scene sceneID="VJG-bA-WBX">
             <objects>
-                <viewController id="abS-ce-NVn" sceneMemberID="viewController">
+                <viewController id="abS-ce-NVn" customClass="TeamListViewController" customModule="TeamNine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S64-c5-EBy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,6 +91,9 @@
                         <viewLayoutGuide key="safeArea" id="qTN-WG-dy0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="팀리스트" id="mNi-GV-fSQ"/>
+                    <connections>
+                        <outlet property="tableView" destination="6eJ-Oq-mca" id="Pwd-HC-RdK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkN-4R-0mO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

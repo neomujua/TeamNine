@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainController.swift
 //  TeamNine
 //
 //  Created by 이현호 on 2020/09/15.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
-
 }
-
