@@ -59,14 +59,55 @@
                     <view key="view" contentMode="scaleToFill" id="IQC-4b-M4a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-Jf-Zx3">
+                                <rect key="frame" x="8" y="96" width="398" height="250"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="UIx-f9-0IA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020년8월 30일 20:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoe-jV-5T4">
+                                <rect key="frame" x="8" y="354" width="398" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYo-BV-zq1">
+                                <rect key="frame" x="8" y="405" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-zg-nAb">
+                                <rect key="frame" x="8" y="434" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Hoe-jV-5T4" firstAttribute="top" secondItem="I2a-Jf-Zx3" secondAttribute="bottom" constant="8" id="3lJ-uI-uAP"/>
+                            <constraint firstItem="I2a-Jf-Zx3" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="3pg-cs-zMN"/>
+                            <constraint firstItem="Hoe-jV-5T4" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="5Hn-xR-Qeq"/>
+                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="OYo-BV-zq1" secondAttribute="trailing" constant="8" id="FON-HQ-z5D"/>
+                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="I2a-Jf-Zx3" secondAttribute="trailing" constant="8" id="JhA-V8-kBU"/>
+                            <constraint firstItem="OYo-BV-zq1" firstAttribute="top" secondItem="Hoe-jV-5T4" secondAttribute="bottom" constant="8" id="Jps-mI-ylk"/>
+                            <constraint firstItem="tqT-zg-nAb" firstAttribute="top" secondItem="OYo-BV-zq1" secondAttribute="bottom" constant="8" id="LkW-il-Mie"/>
+                            <constraint firstItem="OYo-BV-zq1" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="SCp-LX-OYX"/>
+                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="Hoe-jV-5T4" secondAttribute="trailing" constant="8" id="Te9-Ck-hXc"/>
+                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="tqT-zg-nAb" secondAttribute="trailing" constant="8" id="ZrS-hC-KKJ"/>
+                            <constraint firstItem="tqT-zg-nAb" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="sOd-uY-gOn"/>
+                            <constraint firstItem="I2a-Jf-Zx3" firstAttribute="top" secondItem="yVf-6t-qyb" secondAttribute="top" constant="8" id="uc5-k3-leE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yVf-6t-qyb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="팀구하기" id="uNx-wp-o7U"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZiU-3i-JvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="-158"/>
+            <point key="canvasLocation" x="-113.04347826086958" y="-158.03571428571428"/>
         </scene>
         <!--팀리스트-->
         <scene sceneID="VJG-bA-WBX">
