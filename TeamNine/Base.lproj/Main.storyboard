@@ -36,6 +36,22 @@
             </objects>
             <point key="canvasLocation" x="-113" y="1183"/>
         </scene>
+        <!--활동-->
+        <scene sceneID="cf2-J9-vXE">
+            <objects>
+                <viewController id="XiM-Sp-eIu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="85M-Ks-Z9u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Fyp-hZ-Sl4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="활동" id="gUo-p8-0OE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQO-zZ-hBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1289" y="814"/>
+        </scene>
         <!--메시지-->
         <scene sceneID="M6d-uX-WIO">
             <objects>
@@ -168,6 +184,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="abS-ce-NVn" kind="relationship" relationship="viewControllers" id="Ikq-RH-gF3"/>
+                        <segue destination="XiM-Sp-eIu" kind="relationship" relationship="viewControllers" id="0El-7S-esi"/>
                         <segue destination="Lkw-fp-4ti" kind="relationship" relationship="viewControllers" id="Hqg-Dj-2Ya"/>
                         <segue destination="0D6-B9-lHh" kind="relationship" relationship="viewControllers" id="GwX-jZ-oiX"/>
                         <segue destination="y2u-Xw-ciK" kind="relationship" relationship="viewControllers" id="aJj-qk-Y0g"/>
