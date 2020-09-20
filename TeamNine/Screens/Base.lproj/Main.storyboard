@@ -12,7 +12,7 @@
         <!--더보기-->
         <scene sceneID="PPW-V8-vSy">
             <objects>
-                <viewController id="y2u-Xw-ciK" sceneMemberID="viewController">
+                <viewController id="y2u-Xw-ciK" customClass="MoreViewController" customModule="TeamNine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xKe-3W-L0b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,10 +33,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="더보기" id="VEL-9s-UqL"/>
+                    <connections>
+                        <outlet property="tableView" destination="akA-iW-cvv" id="HRA-iG-uvL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGB-Pa-7Y6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="1183"/>
+            <point key="canvasLocation" x="-113" y="1720"/>
         </scene>
         <!--활동-->
         <scene sceneID="cf2-J9-vXE">
@@ -52,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQO-zZ-hBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1289" y="814"/>
+            <point key="canvasLocation" x="-113" y="1002"/>
         </scene>
         <!--메시지-->
         <scene sceneID="M6d-uX-WIO">
@@ -68,37 +71,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ve3-Oc-Rdr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="504"/>
+            <point key="canvasLocation" x="-113" y="311"/>
         </scene>
         <!--팀구하기-->
         <scene sceneID="B1m-0Y-AaC">
             <objects>
-                <viewController id="Lkw-fp-4ti" sceneMemberID="viewController">
+                <viewController id="Lkw-fp-4ti" customClass="GetTeamViewController" customModule="TeamNine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IQC-4b-M4a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-Jf-Zx3">
-                                <rect key="frame" x="8" y="96" width="398" height="250"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="UIx-f9-0IA"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020년8월 30일 20:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoe-jV-5T4">
-                                <rect key="frame" x="8" y="354" width="398" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYo-BV-zq1">
-                                <rect key="frame" x="8" y="405" width="398" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD7-zk-0FZ">
+                                <rect key="frame" x="8" y="775" width="398" height="30"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="신청하기"/>
+                                <connections>
+                                    <action selector="ButtonClicked:" destination="Lkw-fp-4ti" eventType="touchUpInside" id="Hez-WZ-hB0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSj-C0-2nj">
+                                <rect key="frame" x="8" y="102.5" width="29.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-zg-nAb">
-                                <rect key="frame" x="8" y="434" width="398" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m14-E3-czL">
+                                <rect key="frame" x="45.5" y="96" width="360.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n7b-Tt-lka">
+                                <rect key="frame" x="75" y="138" width="331" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필요인원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRp-LL-SoB">
+                                <rect key="frame" x="8" y="144.5" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -107,25 +115,30 @@
                         <viewLayoutGuide key="safeArea" id="yVf-6t-qyb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Hoe-jV-5T4" firstAttribute="top" secondItem="I2a-Jf-Zx3" secondAttribute="bottom" constant="8" id="3lJ-uI-uAP"/>
-                            <constraint firstItem="I2a-Jf-Zx3" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="3pg-cs-zMN"/>
-                            <constraint firstItem="Hoe-jV-5T4" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="5Hn-xR-Qeq"/>
-                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="OYo-BV-zq1" secondAttribute="trailing" constant="8" id="FON-HQ-z5D"/>
-                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="I2a-Jf-Zx3" secondAttribute="trailing" constant="8" id="JhA-V8-kBU"/>
-                            <constraint firstItem="OYo-BV-zq1" firstAttribute="top" secondItem="Hoe-jV-5T4" secondAttribute="bottom" constant="8" id="Jps-mI-ylk"/>
-                            <constraint firstItem="tqT-zg-nAb" firstAttribute="top" secondItem="OYo-BV-zq1" secondAttribute="bottom" constant="8" id="LkW-il-Mie"/>
-                            <constraint firstItem="OYo-BV-zq1" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="SCp-LX-OYX"/>
-                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="Hoe-jV-5T4" secondAttribute="trailing" constant="8" id="Te9-Ck-hXc"/>
-                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="tqT-zg-nAb" secondAttribute="trailing" constant="8" id="ZrS-hC-KKJ"/>
-                            <constraint firstItem="tqT-zg-nAb" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="sOd-uY-gOn"/>
-                            <constraint firstItem="I2a-Jf-Zx3" firstAttribute="top" secondItem="yVf-6t-qyb" secondAttribute="top" constant="8" id="uc5-k3-leE"/>
+                            <constraint firstItem="oD7-zk-0FZ" firstAttribute="bottom" secondItem="yVf-6t-qyb" secondAttribute="bottom" constant="-8" id="06O-O4-IH0"/>
+                            <constraint firstItem="fSj-C0-2nj" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="A9j-qh-W6n"/>
+                            <constraint firstItem="fSj-C0-2nj" firstAttribute="centerY" secondItem="m14-E3-czL" secondAttribute="centerY" id="Fj2-4T-V04"/>
+                            <constraint firstItem="oD7-zk-0FZ" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="JVE-Yx-oRz"/>
+                            <constraint firstItem="n7b-Tt-lka" firstAttribute="top" secondItem="m14-E3-czL" secondAttribute="bottom" constant="8" id="NP1-5c-h16"/>
+                            <constraint firstItem="m14-E3-czL" firstAttribute="leading" secondItem="fSj-C0-2nj" secondAttribute="trailing" constant="8" id="OO2-9k-8hW"/>
+                            <constraint firstItem="n7b-Tt-lka" firstAttribute="leading" secondItem="TRp-LL-SoB" secondAttribute="trailing" constant="8" id="TWQ-tv-ILL"/>
+                            <constraint firstItem="TRp-LL-SoB" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="Uuh-2x-MyA"/>
+                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="n7b-Tt-lka" secondAttribute="trailing" constant="8" id="dvw-TF-00M"/>
+                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="oD7-zk-0FZ" secondAttribute="trailing" constant="8" id="e14-UL-wSo"/>
+                            <constraint firstItem="m14-E3-czL" firstAttribute="top" secondItem="yVf-6t-qyb" secondAttribute="top" constant="8" id="gXj-8q-Xvd"/>
+                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="m14-E3-czL" secondAttribute="trailing" constant="8" id="qYt-1b-WQ8"/>
+                            <constraint firstItem="TRp-LL-SoB" firstAttribute="centerY" secondItem="n7b-Tt-lka" secondAttribute="centerY" id="xre-C2-Ojv"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="팀구하기" id="uNx-wp-o7U"/>
+                    <connections>
+                        <outlet property="placeTextField" destination="m14-E3-czL" id="2Jr-36-eYy"/>
+                        <outlet property="teamSpaceTextField" destination="n7b-Tt-lka" id="COU-S7-Adh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZiU-3i-JvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113.04347826086958" y="-158.03571428571428"/>
+            <point key="canvasLocation" x="-113" y="-392"/>
         </scene>
         <!--팀리스트-->
         <scene sceneID="VJG-bA-WBX">
@@ -156,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkN-4R-0mO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="-855"/>
+            <point key="canvasLocation" x="-113" y="-1090"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5gi-bp-UfQ">
@@ -201,8 +214,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

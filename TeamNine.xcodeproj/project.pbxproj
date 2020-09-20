@@ -20,6 +20,8 @@
 		A588BD612517130400C6DF69 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A588BD602517130400C6DF69 /* FirebaseAuth */; };
 		A588BD632517130400C6DF69 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A588BD622517130400C6DF69 /* FirebaseDatabase */; };
 		A588BD68251713E300C6DF69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A588BD67251713E300C6DF69 /* GoogleService-Info.plist */; };
+		A588BD7F2517186D00C6DF69 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588BD7E2517186D00C6DF69 /* MoreViewController.swift */; };
+		A588BD89251756A500C6DF69 /* GetTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588BD88251756A500C6DF69 /* GetTeamViewController.swift */; };
 		A5D6F7A82515936500DB1E39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F7A72515936500DB1E39 /* User.swift */; };
 		A5D6F7AD2515941A00DB1E39 /* TeamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F7AC2515941A00DB1E39 /* TeamItem.swift */; };
 		A5FDCBC32510F8100016521C /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDCBC22510F8100016521C /* TeamListViewController.swift */; };
@@ -60,6 +62,8 @@
 		A577053D2510F42D001A921C /* TeamListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamListCell.xib; sourceTree = "<group>"; };
 		A57705402510F5FD001A921C /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		A588BD67251713E300C6DF69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A588BD7E2517186D00C6DF69 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		A588BD88251756A500C6DF69 /* GetTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamViewController.swift; sourceTree = "<group>"; };
 		A5D6F7A72515936500DB1E39 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5D6F7AC2515941A00DB1E39 /* TeamItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamItem.swift; sourceTree = "<group>"; };
 		A5FDCBC22510F8100016521C /* TeamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
@@ -115,8 +119,9 @@
 		A577050125105858001A921C /* TeamNine */ = {
 			isa = PBXGroup;
 			children = (
-				A577050825105858001A921C /* Main.storyboard */,
-				A57705382510F2A9001A921C /* View */,
+				A588BD6F2517161100C6DF69 /* CustomView */,
+				A5D6F7A32515934600DB1E39 /* Model */,
+				A57705382510F2A9001A921C /* Screens */,
 				A577050225105858001A921C /* AppDelegate.swift */,
 				A577050425105858001A921C /* SceneDelegate.swift */,
 				A577050B2510585A001A921C /* Assets.xcassets */,
@@ -145,15 +150,16 @@
 			path = TeamNineUITests;
 			sourceTree = "<group>";
 		};
-		A57705382510F2A9001A921C /* View */ = {
+		A57705382510F2A9001A921C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				A5D6F7A32515934600DB1E39 /* Model */,
-				A57705392510F3DD001A921C /* Cell */,
-				A57705402510F5FD001A921C /* MainController.swift */,
+				A577050825105858001A921C /* Main.storyboard */,
 				A5FDCBC22510F8100016521C /* TeamListViewController.swift */,
+				A57705402510F5FD001A921C /* MainController.swift */,
+				A588BD7E2517186D00C6DF69 /* MoreViewController.swift */,
+				A588BD88251756A500C6DF69 /* GetTeamViewController.swift */,
 			);
-			path = View;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		A57705392510F3DD001A921C /* Cell */ = {
@@ -163,6 +169,14 @@
 				A577053D2510F42D001A921C /* TeamListCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A588BD6F2517161100C6DF69 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				A57705392510F3DD001A921C /* Cell */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		A5D6F7A32515934600DB1E39 /* Model */ = {
@@ -314,11 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A588BD89251756A500C6DF69 /* GetTeamViewController.swift in Sources */,
 				A5FDCBC32510F8100016521C /* TeamListViewController.swift in Sources */,
 				A57705412510F5FD001A921C /* MainController.swift in Sources */,
 				A5D6F7A82515936500DB1E39 /* User.swift in Sources */,
 				A5D6F7AD2515941A00DB1E39 /* TeamItem.swift in Sources */,
 				A577053E2510F42D001A921C /* TeamListCell.swift in Sources */,
+				A588BD7F2517186D00C6DF69 /* MoreViewController.swift in Sources */,
 				A577050325105858001A921C /* AppDelegate.swift in Sources */,
 				A577050525105858001A921C /* SceneDelegate.swift in Sources */,
 			);

@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class TeamListViewController: UIViewController {
 
 
     @IBOutlet weak var tableView: UITableView!
+    let teamItemsReference = Database.database().reference(withPath: "team-items")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +23,6 @@ class TeamListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
-        print("Gi")
-
     }
     
 
@@ -44,6 +44,20 @@ extension TeamListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+//        teamItemsReference.observe(.value, with: {
+//            snapshot in
+//            print(snapshot)
+//        })
+        
+//        teamItemsReference.child("user").observe(.value) {
+//            snapshot in
+//            let value = snapshot.value as! [String: AnyObject]
+//            let name = value["name"] as! String
+//
+//            print("name is \(name)")
+//        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "TeamListCell")
         
         if let displayCell = cell as? TeamListCell {
