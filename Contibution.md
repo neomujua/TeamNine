@@ -1,6 +1,13 @@
 ## Contribution Guide
 작업을 하실 때 꼭 읽고 시작해 주세요!
 
+## How to Start!
+```
+$ git clone https://github.com/ProjectInTheClass/TeamNine.git
+
+$ cd TeamNine
+```
+
 ## Branch
 브랜치는 Dev에서 따서 작업 하신 후 Dev로 PR날려주세요.
 Master에 절대로 직접 푸쉬하지 마세요!
