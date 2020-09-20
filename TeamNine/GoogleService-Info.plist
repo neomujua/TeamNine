@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>165040792788-fkag2fm52bebem28gpgk4gq5h25vp58d.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.165040792788-fkag2fm52bebem28gpgk4gq5h25vp58d</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDrahTJTPFSh7M3ZL7eF_h0m0hTihaOjd4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>165040792788</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Ysoup.TeamNine</string>
+	<key>PROJECT_ID</key>
+	<string>polished-tube-238200</string>
+	<key>STORAGE_BUCKET</key>
+	<string>polished-tube-238200.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:165040792788:ios:677940180dbf119bb10741</string>
+	<key>DATABASE_URL</key>
+	<string>https://polished-tube-238200.firebaseio.com</string>
+</dict>
+</plist>
