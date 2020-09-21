@@ -11,10 +11,8 @@ import Firebase
 
 class TeamListViewController: UIViewController {
 
-
     @IBOutlet weak var tableView: UITableView!
     let teamItemsReference = Database.database().reference(withPath: "team-items")
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
@@ -39,8 +37,25 @@ class TeamListViewController: UIViewController {
 }
 
 extension TeamListViewController: UITableViewDataSource, UITableViewDelegate {
+    func getNumber() -> Int {
+        var number:Int = 0
+        teamItemsReference.observeSingleEvent(of: .value, with: { (snapshot) in let value = snapshot.value as? NSDictionary
+            
+            
+            for _ in value! {
+                number += 1
+            }
+            
+            print("IN : \(number)")
+        }
+        ) { (error) in print(error.localizedDescription)}
+        print("OUT : \(number)")
+        
+        return number
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        let number: Int = getNumber()
+        return number
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
