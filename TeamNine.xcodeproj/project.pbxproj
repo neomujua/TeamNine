@@ -23,6 +23,7 @@
 		A588BD7F2517186D00C6DF69 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588BD7E2517186D00C6DF69 /* MoreViewController.swift */; };
 		A588BD89251756A500C6DF69 /* GetTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588BD88251756A500C6DF69 /* GetTeamViewController.swift */; };
 		A5C7ED1B251CEDC50002415B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A5C7ED1A251CEDC50002415B /* .swiftlint.yml */; };
+		A5C7ED34251CF5D50002415B /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C7ED33251CF5D50002415B /* Test.swift */; };
 		A5D6F7A82515936500DB1E39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F7A72515936500DB1E39 /* User.swift */; };
 		A5D6F7AD2515941A00DB1E39 /* TeamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F7AC2515941A00DB1E39 /* TeamItem.swift */; };
 		A5FDCBC32510F8100016521C /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDCBC22510F8100016521C /* TeamListViewController.swift */; };
@@ -66,6 +67,7 @@
 		A588BD7E2517186D00C6DF69 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		A588BD88251756A500C6DF69 /* GetTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamViewController.swift; sourceTree = "<group>"; };
 		A5C7ED1A251CEDC50002415B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A5C7ED33251CF5D50002415B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		A5D6F7A72515936500DB1E39 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5D6F7AC2515941A00DB1E39 /* TeamItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamItem.swift; sourceTree = "<group>"; };
 		A5FDCBC22510F8100016521C /* TeamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				A57705182510585A001A921C /* TeamNineTests */,
 				A57705232510585A001A921C /* TeamNineUITests */,
 				A577050025105858001A921C /* Products */,
+				A5C7ED25251CF39A0002415B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +164,7 @@
 				A57705402510F5FD001A921C /* MainController.swift */,
 				A588BD7E2517186D00C6DF69 /* MoreViewController.swift */,
 				A588BD88251756A500C6DF69 /* GetTeamViewController.swift */,
+				A5C7ED33251CF5D50002415B /* Test.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -180,6 +184,13 @@
 				A57705392510F3DD001A921C /* Cell */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		A5C7ED25251CF39A0002415B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A5D6F7A32515934600DB1E39 /* Model */ = {
@@ -360,6 +371,7 @@
 				A5D6F7AD2515941A00DB1E39 /* TeamItem.swift in Sources */,
 				A577053E2510F42D001A921C /* TeamListCell.swift in Sources */,
 				A588BD7F2517186D00C6DF69 /* MoreViewController.swift in Sources */,
+				A5C7ED34251CF5D50002415B /* Test.swift in Sources */,
 				A577050325105858001A921C /* AppDelegate.swift in Sources */,
 				A577050525105858001A921C /* SceneDelegate.swift in Sources */,
 			);
