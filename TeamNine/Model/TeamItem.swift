@@ -25,6 +25,7 @@ struct TeamItem {
     let imageUrl: String
     let ownerName: String
     
+    //데이터스냅샷을 받아와서 그 데이터로 설정해주는 코드입니다.
     init?(snapshot: DataSnapshot) {
         guard
             let value = snapshot.value as? [String: AnyObject],
