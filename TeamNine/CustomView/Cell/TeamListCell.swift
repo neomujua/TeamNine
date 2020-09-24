@@ -26,6 +26,7 @@ class TeamListCell: UITableViewCell {
         //print(testReference.key)
         
         
+        //파이어베이스에서 데이터를 받아오는 코드입니다. 이 부분 확인 부탁드립니다!
         teamItemReference.observe(.value, with: { snapshot in
             var newItems: [TeamItem] = []
             
@@ -33,11 +34,11 @@ class TeamListCell: UITableViewCell {
                 if let snapshot = child as? DataSnapshot, let teamItem = TeamItem(snapshot: snapshot) {
                     //let title = value["title"] as? String
                     //print(asdf)
-                    newItems.append(teamItem)
+                    newItems.append(teamItem) //teamItem에 파이어베이스 데이터를 데이터스냅샷으로 넘겨줘서 teamItem 변수를 초기화한 다음에 newItems 배열에 추가시킵니다.
                 }
                 
             }
-            print(newItems)
+            print(newItems) //근데 여기서 확인을 해보니깐 추가가 안되어 있어요 ㅜ.ㅜ
         })
  
         // Initialization code
