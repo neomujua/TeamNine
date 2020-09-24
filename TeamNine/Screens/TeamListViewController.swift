@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 
 class TeamListViewController: UIViewController {
-
     @IBOutlet weak var tableView: UITableView!
     var countOfchildren: Int = 0
     let teamItemsReference = Database.database().reference(withPath: "team-items")
