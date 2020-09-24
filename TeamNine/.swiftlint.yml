@@ -1,0 +1,4 @@
+disabled_rules: # 제외하고 싶은 규칙
+- line_length
+included: # 포함되게 하고 싶은 것
+excluded: # 제외하고 싶은 것

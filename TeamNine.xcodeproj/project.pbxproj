@@ -22,6 +22,7 @@
 		A588BD68251713E300C6DF69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A588BD67251713E300C6DF69 /* GoogleService-Info.plist */; };
 		A588BD7F2517186D00C6DF69 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588BD7E2517186D00C6DF69 /* MoreViewController.swift */; };
 		A588BD89251756A500C6DF69 /* GetTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588BD88251756A500C6DF69 /* GetTeamViewController.swift */; };
+		A5C7ED1B251CEDC50002415B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A5C7ED1A251CEDC50002415B /* .swiftlint.yml */; };
 		A5D6F7A82515936500DB1E39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F7A72515936500DB1E39 /* User.swift */; };
 		A5D6F7AD2515941A00DB1E39 /* TeamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F7AC2515941A00DB1E39 /* TeamItem.swift */; };
 		A5FDCBC32510F8100016521C /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDCBC22510F8100016521C /* TeamListViewController.swift */; };
@@ -64,6 +65,7 @@
 		A588BD67251713E300C6DF69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A588BD7E2517186D00C6DF69 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		A588BD88251756A500C6DF69 /* GetTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamViewController.swift; sourceTree = "<group>"; };
+		A5C7ED1A251CEDC50002415B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A5D6F7A72515936500DB1E39 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5D6F7AC2515941A00DB1E39 /* TeamItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamItem.swift; sourceTree = "<group>"; };
 		A5FDCBC22510F8100016521C /* TeamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				A577050D2510585A001A921C /* LaunchScreen.storyboard */,
 				A57705102510585A001A921C /* Info.plist */,
 				A588BD67251713E300C6DF69 /* GoogleService-Info.plist */,
+				A5C7ED1A251CEDC50002415B /* .swiftlint.yml */,
 			);
 			path = TeamNine;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				A57704FB25105858001A921C /* Sources */,
 				A57704FC25105858001A921C /* Frameworks */,
 				A57704FD25105858001A921C /* Resources */,
+				A5C7ED11251CED590002415B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -299,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C7ED1B251CEDC50002415B /* .swiftlint.yml in Resources */,
 				A577053F2510F42D001A921C /* TeamListCell.xib in Resources */,
 				A577050F2510585A001A921C /* LaunchScreen.storyboard in Resources */,
 				A588BD68251713E300C6DF69 /* GoogleService-Info.plist in Resources */,
@@ -322,6 +327,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5C7ED11251CED590002415B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A57704FB25105858001A921C /* Sources */ = {

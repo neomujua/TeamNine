@@ -8,15 +8,11 @@
 
 import UIKit
 
-
 class MoreViewController: UIViewController {
-    
     @IBOutlet weak var tableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
 //        let rootRef = Database.database().reference()
 //        let childRef = Database.database().reference(withPath: "grocery-items")
 //        let itemsRef = rootRef.child("grocery-items")
@@ -31,7 +27,6 @@ class MoreViewController: UIViewController {
 //
 
 
-        
     }
 
 }
