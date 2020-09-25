@@ -10,14 +10,13 @@ import UIKit
 import Firebase
 
 class TeamListCell: UITableViewCell {
-    var teamList = [TeamItem]()
     @IBOutlet weak var gameTime: UILabel!
     @IBOutlet weak var gameTitle: UILabel!
     @IBOutlet weak var enrollButton: UIButton!
     @IBOutlet weak var userLevel: UILabel!
-    let teamItemReference = Database.database().reference(withPath: "team-items")
     override func awakeFromNib() {
         super.awakeFromNib()
+        enrollButton.setTitleColor(.white, for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

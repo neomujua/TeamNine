@@ -58,6 +58,13 @@ extension TeamListViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TeamListCell", for: indexPath) as? TeamListCell
         cell?.gameTitle?.text = teamItems[indexPath.row].title
         cell?.gameTime?.text = teamItems[indexPath.row].gameStartTime
+        if teamItems[indexPath.row].teamSpace == 0 {
+            cell?.enrollButton.backgroundColor = UIColor.red
+            cell?.enrollButton.setTitle("신청 불가", for: .normal)
+        } else {
+            cell?.enrollButton.backgroundColor = UIColor.blue
+            cell?.enrollButton.setTitle("신청 가능", for: .normal)
+        }
         print(indexPath.row)
         return cell!
     }
