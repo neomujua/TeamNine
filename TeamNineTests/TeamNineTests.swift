@@ -19,9 +19,10 @@ class TeamNineTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetSum() throws {
+        let test = Test(aaa: 3, bbb: 5)
+        test.getSum(aaa: 3, bbb: 6)
+        XCTAssertEqual(test.getSum(aaa: 3, bbb: 6), 9)
     }
 
     func testPerformanceExample() throws {

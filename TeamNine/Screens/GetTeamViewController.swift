@@ -15,7 +15,7 @@ class GetTeamViewController: UIViewController {
     
     let teamItemsReference = Database.database().reference(withPath: "team-items")
     
-    @IBAction func ButtonClicked(_ sender: Any) {
+    @IBAction func buttonClicked(_ sender: Any) {
         //let values: [String: Any] = [ "name": "hyunho", "age": 31, "married": false]
         let values: [String: Any] = [ "place": placeTextField.text, "teamSpace": teamSpaceTextField.text, "owner": "hyunho"]
         let userItemRef = self.teamItemsReference.child(placeTextField.text ?? "empty")
