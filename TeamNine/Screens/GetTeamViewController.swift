@@ -21,7 +21,6 @@ class GetTeamViewController: UIViewController {
         let userItemRef = self.teamItemsReference.child(placeTextField.text ?? "empty")
         userItemRef.setValue(values)
         
-        
         teamItemsReference.observe(.value, with: {
             snapshot in
             print(snapshot)
@@ -41,8 +40,4 @@ class GetTeamViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
-
-
 }

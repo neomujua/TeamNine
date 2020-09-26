@@ -11,7 +11,6 @@ import Firebase
 
 class TeamListViewController: UIViewController {
 
-
     @IBOutlet weak var tableView: UITableView!
     let teamItemsReference = Database.database().reference(withPath: "team-items")
     
@@ -24,7 +23,6 @@ class TeamListViewController: UIViewController {
         tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation
