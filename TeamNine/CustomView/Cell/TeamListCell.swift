@@ -17,6 +17,7 @@ class TeamListCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         enrollButton.setTitleColor(.white, for: .normal)
+        enrollButton.layer.cornerRadius = 6.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
