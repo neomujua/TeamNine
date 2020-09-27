@@ -10,10 +10,10 @@ import UIKit
 import Firebase
 
 class TeamListViewController: UIViewController {
-
     @IBOutlet weak var tableView: UITableView!
+    var countOfchildren: Int = 0
+    var teamItems: [TeamItem] = []
     let teamItemsReference = Database.database().reference(withPath: "team-items")
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
@@ -21,9 +21,23 @@ class TeamListViewController: UIViewController {
         tableView.backgroundColor = .systemPink
         tableView.delegate = self
         tableView.dataSource = self
+        teamItemsReference.observeSingleEvent(of: .value, with: { (snapshot) in
+            self.countOfchildren = Int(snapshot.childrenCount)
+            self.tableView.reloadData()
+        }
+        ) { (error) in print(error.localizedDescription) }
         // Do any additional setup after loading the view.
+        teamItemsReference.observe(.value, with: { snapshot in
+            var newItems: [TeamItem] = []
+            for child in snapshot.children {
+                if let snapshot = child as? DataSnapshot, let teamItem = TeamItem(snapshot: snapshot) {
+                    newItems.append(teamItem)
+                }
+            }
+            self.teamItems = newItems
+            self.tableView.reloadData()
+        })
     }
-
     /*
     // MARK: - Navigation
 
@@ -38,30 +52,20 @@ class TeamListViewController: UIViewController {
 
 extension TeamListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        return countOfchildren
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-//        teamItemsReference.observe(.value, with: {
-//            snapshot in
-//            print(snapshot)
-//        })
-        
-//        teamItemsReference.child("user").observe(.value) {
-//            snapshot in
-//            let value = snapshot.value as! [String: AnyObject]
-//            let name = value["name"] as! String
-//
-//            print("name is \(name)")
-//        }
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TeamListCell")
-        
-        if let displayCell = cell as? TeamListCell {
-            displayCell.awakeFromNib()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TeamListCell", for: indexPath) as? TeamListCell
+        cell?.gameTitle?.text = teamItems[indexPath.row].title
+        cell?.gameTime?.text = teamItems[indexPath.row].gameStartTime
+        if teamItems[indexPath.row].teamSpace == 0 {
+            cell?.enrollButton.backgroundColor = UIColor.red
+            cell?.enrollButton.setTitle("신청 불가", for: .normal)
+        } else {
+            cell?.enrollButton.backgroundColor = UIColor.blue
+            cell?.enrollButton.setTitle("신청 가능", for: .normal)
         }
-
+        print(indexPath.row)
         return cell!
     }
 }

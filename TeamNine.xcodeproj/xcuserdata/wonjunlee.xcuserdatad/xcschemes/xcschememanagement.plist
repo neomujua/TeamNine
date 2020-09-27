@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Promises (Playground) 1.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
+		<key>Promises (Playground) 2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>21</integer>
+		</dict>
+		<key>Promises (Playground).xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
+		<key>TeamNine.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+<<<<<<< HEAD
+			<integer>19</integer>
+=======
+<<<<<<< HEAD
+			<integer>1</integer>
+=======
+			<integer>18</integer>
+>>>>>>> teamList
+>>>>>>> ec3a76a950bfeef7277e88c8919a481fcb590b91
+		</dict>
+	</dict>
+</dict>
+</plist>
