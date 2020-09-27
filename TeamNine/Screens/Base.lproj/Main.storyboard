@@ -89,56 +89,95 @@
                                     <action selector="ButtonClicked:" destination="Lkw-fp-4ti" eventType="touchUpInside" id="Hez-WZ-hB0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSj-C0-2nj">
-                                <rect key="frame" x="8" y="102.5" width="29.5" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="글 제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vkv-nZ-nFa">
+                                <rect key="frame" x="8" y="150" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="장소 이미지 URL 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UXg-7m-vGU">
+                                <rect key="frame" x="8" y="108" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <searchBar contentMode="redraw" placeholder="예) 팀구동 12-3 OO 체육관" translatesAutoresizingMaskIntoConstraints="NO" id="9bm-nP-BUF">
+                                <rect key="frame" x="2" y="192" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 설정된 장소 : 입력받은 장소 값" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mo5-t7-kv2">
+                                <rect key="frame" x="8" y="256" width="398" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m14-E3-czL">
-                                <rect key="frame" x="45.5" y="96" width="360.5" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY - MM - DD (경기 날짜)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gar-cv-M6f">
+                                <rect key="frame" x="8" y="285" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n7b-Tt-lka">
-                                <rect key="frame" x="75" y="138" width="331" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00:00 ~ 00:00 (경기시간)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-w3-Wtd">
+                                <rect key="frame" x="8" y="327" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필요인원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRp-LL-SoB">
-                                <rect key="frame" x="8" y="144.5" width="59" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0 (모집인원)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-0t-bfy">
+                                <rect key="frame" x="8" y="369" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Dl-f4-tAY">
+                                <rect key="frame" x="8" y="411" width="398" height="402"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="추가 설명을 자유롭게 적어주세요. (참가비/계좌번호/핸드폰번호/당부사항)" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="saR-j2-YA0">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="402"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eea-Ej-hr9" firstAttribute="trailing" secondItem="saR-j2-YA0" secondAttribute="trailing" id="BUY-Ie-xMp"/>
+                                    <constraint firstItem="saR-j2-YA0" firstAttribute="top" secondItem="eea-Ej-hr9" secondAttribute="top" id="Qgb-L2-dHZ"/>
+                                    <constraint firstItem="saR-j2-YA0" firstAttribute="leading" secondItem="eea-Ej-hr9" secondAttribute="leading" id="chg-eo-A9F"/>
+                                    <constraint firstItem="eea-Ej-hr9" firstAttribute="bottom" secondItem="saR-j2-YA0" secondAttribute="bottom" id="wJ2-94-3at"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="VU4-rh-3n5"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="eea-Ej-hr9"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yVf-6t-qyb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oD7-zk-0FZ" firstAttribute="bottom" secondItem="yVf-6t-qyb" secondAttribute="bottom" constant="-8" id="06O-O4-IH0"/>
-                            <constraint firstItem="fSj-C0-2nj" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="A9j-qh-W6n"/>
-                            <constraint firstItem="fSj-C0-2nj" firstAttribute="centerY" secondItem="m14-E3-czL" secondAttribute="centerY" id="Fj2-4T-V04"/>
+                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="gar-cv-M6f" secondAttribute="trailing" constant="8" id="1pV-fU-RNy"/>
+                            <constraint firstItem="UXg-7m-vGU" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="24u-z4-dub"/>
+                            <constraint firstAttribute="trailing" secondItem="UXg-7m-vGU" secondAttribute="trailing" constant="8" id="27c-D8-smG"/>
+                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="Mo5-t7-kv2" secondAttribute="trailing" constant="8" id="5Ua-4R-edd"/>
+                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="0wb-0t-bfy" secondAttribute="trailing" constant="8" id="8wb-Ym-3i2"/>
+                            <constraint firstItem="9bm-nP-BUF" firstAttribute="top" secondItem="Vkv-nZ-nFa" secondAttribute="bottom" constant="8" id="9gy-Lj-poJ"/>
+                            <constraint firstAttribute="trailing" secondItem="9bm-nP-BUF" secondAttribute="trailing" constant="-2" id="DFz-Oy-dti"/>
+                            <constraint firstItem="UXg-7m-vGU" firstAttribute="top" secondItem="yVf-6t-qyb" secondAttribute="top" constant="20" id="F6K-03-SKV"/>
                             <constraint firstItem="oD7-zk-0FZ" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="JVE-Yx-oRz"/>
-                            <constraint firstItem="n7b-Tt-lka" firstAttribute="top" secondItem="m14-E3-czL" secondAttribute="bottom" constant="8" id="NP1-5c-h16"/>
-                            <constraint firstItem="m14-E3-czL" firstAttribute="leading" secondItem="fSj-C0-2nj" secondAttribute="trailing" constant="8" id="OO2-9k-8hW"/>
-                            <constraint firstItem="n7b-Tt-lka" firstAttribute="leading" secondItem="TRp-LL-SoB" secondAttribute="trailing" constant="8" id="TWQ-tv-ILL"/>
-                            <constraint firstItem="TRp-LL-SoB" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="Uuh-2x-MyA"/>
-                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="n7b-Tt-lka" secondAttribute="trailing" constant="8" id="dvw-TF-00M"/>
+                            <constraint firstItem="PMK-w3-Wtd" firstAttribute="top" secondItem="gar-cv-M6f" secondAttribute="bottom" constant="8" id="LJc-iL-aII"/>
+                            <constraint firstAttribute="trailing" secondItem="Vkv-nZ-nFa" secondAttribute="trailing" constant="8" id="NEx-me-hLM"/>
+                            <constraint firstItem="9bm-nP-BUF" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="2" id="SuP-qS-HEB"/>
+                            <constraint firstItem="0wb-0t-bfy" firstAttribute="top" secondItem="PMK-w3-Wtd" secondAttribute="bottom" constant="8" id="Ua2-tJ-shm"/>
+                            <constraint firstItem="PMK-w3-Wtd" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="Var-n7-zp8"/>
+                            <constraint firstItem="Vkv-nZ-nFa" firstAttribute="top" secondItem="UXg-7m-vGU" secondAttribute="bottom" constant="8" id="YZ5-sI-XF0"/>
+                            <constraint firstItem="Mo5-t7-kv2" firstAttribute="top" secondItem="9bm-nP-BUF" secondAttribute="bottom" constant="8" id="aAz-Oa-kpL"/>
+                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="PMK-w3-Wtd" secondAttribute="trailing" constant="8" id="bli-nD-IqQ"/>
+                            <constraint firstItem="Vkv-nZ-nFa" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="cO0-We-esZ"/>
                             <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="oD7-zk-0FZ" secondAttribute="trailing" constant="8" id="e14-UL-wSo"/>
-                            <constraint firstItem="m14-E3-czL" firstAttribute="top" secondItem="yVf-6t-qyb" secondAttribute="top" constant="8" id="gXj-8q-Xvd"/>
-                            <constraint firstItem="yVf-6t-qyb" firstAttribute="trailing" secondItem="m14-E3-czL" secondAttribute="trailing" constant="8" id="qYt-1b-WQ8"/>
-                            <constraint firstItem="TRp-LL-SoB" firstAttribute="centerY" secondItem="n7b-Tt-lka" secondAttribute="centerY" id="xre-C2-Ojv"/>
+                            <constraint firstItem="gar-cv-M6f" firstAttribute="top" secondItem="Mo5-t7-kv2" secondAttribute="bottom" constant="8" id="fIH-4R-tZs"/>
+                            <constraint firstItem="0wb-0t-bfy" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="fVf-0B-xWw"/>
+                            <constraint firstItem="Mo5-t7-kv2" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="hUp-lM-VYg"/>
+                            <constraint firstItem="gar-cv-M6f" firstAttribute="leading" secondItem="yVf-6t-qyb" secondAttribute="leading" constant="8" id="u6Q-T4-yXc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="팀구하기" id="uNx-wp-o7U"/>
-                    <connections>
-                        <outlet property="placeTextField" destination="m14-E3-czL" id="2Jr-36-eYy"/>
-                        <outlet property="teamSpaceTextField" destination="n7b-Tt-lka" id="COU-S7-Adh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZiU-3i-JvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="-392"/>
+            <point key="canvasLocation" x="-113.04347826086958" y="-392.41071428571428"/>
         </scene>
         <!--팀리스트-->
         <scene sceneID="VJG-bA-WBX">

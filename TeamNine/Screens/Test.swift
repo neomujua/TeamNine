@@ -12,12 +12,12 @@ class Test {
     var aaa: Int
     var bbb: Int
     
-    init(aaa: Int,bbb: Int) {
+    init(aaa: Int, bbb: Int) {
         self.aaa = aaa
         self.bbb = bbb
     }
     
-    func getSum(aaa:Int, bbb:Int) -> Int{
+    func getSum(aaa: Int, bbb: Int) -> Int {
         return aaa+bbb
     }
 }
