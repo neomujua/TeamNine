@@ -12,7 +12,7 @@
         <!--더보기-->
         <scene sceneID="PPW-V8-vSy">
             <objects>
-                <viewController id="y2u-Xw-ciK" customClass="MoreViewController" customModule="TeamNine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="y2u-Xw-ciK" customClass="MoreListViewController" customModule="TeamNine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xKe-3W-L0b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,6 +20,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="akA-iW-cvv">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="y2u-Xw-ciK" id="a1W-3e-TtB"/>
+                                    <outlet property="delegate" destination="y2u-Xw-ciK" id="kRd-UK-hIs"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ezi-6t-dtQ"/>
