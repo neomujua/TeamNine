@@ -128,7 +128,7 @@
                                 <rect key="frame" x="8" y="411" width="398" height="402"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="추가 설명을 자유롭게 적어주세요. (참가비/계좌번호/핸드폰번호/당부사항)" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="saR-j2-YA0">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="추가 설명을 자유롭게 적어주세요. (참가비/계좌번호/핸드폰번호/당부사항)" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="saR-j2-YA0" userLabel="추가 설명을 자유롭게 적어주세요. (참가비/계좌번호/핸드폰번호/당부사항)">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="402"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -174,6 +174,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="팀구하기" id="uNx-wp-o7U"/>
+                    <connections>
+                        <outlet property="explanation" destination="saR-j2-YA0" id="mWJ-i1-feW"/>
+                        <outlet property="matchDate" destination="gar-cv-M6f" id="kvo-NM-fMP"/>
+                        <outlet property="matchTime" destination="PMK-w3-Wtd" id="GbR-hm-WRG"/>
+                        <outlet property="placeImageURL" destination="UXg-7m-vGU" id="0B8-k7-cgj"/>
+                        <outlet property="recruitmentNumber" destination="0wb-0t-bfy" id="6yy-5w-2jx"/>
+                        <outlet property="recruitmentTitle" destination="Vkv-nZ-nFa" id="kHP-WT-P4V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZiU-3i-JvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -215,7 +223,7 @@
             </objects>
             <point key="canvasLocation" x="768.11594202898561" y="-1053.3482142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--신청하기-->
         <scene sceneID="C2U-qE-0vp">
             <objects>
                 <viewController id="cnt-t5-kOv" sceneMemberID="viewController">
@@ -223,23 +231,117 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경기 상세페이지 구현 예정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUN-NE-Cse">
-                                <rect key="frame" x="119.5" y="437.5" width="175" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="농구" translatesAutoresizingMaskIntoConstraints="NO" id="h3e-YH-qVe">
+                                <rect key="frame" x="8" y="64" width="398" height="233"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="233" id="Lna-bN-sjb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020년 9월 21일 월요일 20:00 ~ 22:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOP-aX-cd2">
+                                <rect key="frame" x="8" y="317" width="398" height="26"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연세대 체육관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25A-Nn-yAX">
+                                <rect key="frame" x="8" y="353" width="398" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연세로 50 연세대학교 체육관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doB-2f-TDO">
+                                <rect key="frame" x="8" y="385.5" width="398" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="종목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ci3-IM-pVw">
+                                <rect key="frame" x="8" y="423.5" width="398" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="농구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0v-iq-WJW">
+                                <rect key="frame" x="8" y="446.5" width="398" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="작성자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbV-nx-DYy">
+                                <rect key="frame" x="8" y="489.5" width="398" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한도찬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIa-CS-FAy">
+                                <rect key="frame" x="8" y="512.5" width="398" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상세 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdo-CE-xmA">
+                                <rect key="frame" x="8" y="558.5" width="398" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gbc-Fd-WRc">
+                                <rect key="frame" x="8" y="592" width="398" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="qNi-3J-rdK"/>
+                                </constraints>
+                                <string key="text">안녕하세요. 연세대 중앙동아리 OOO입니다. 9월 21일 월요일 20:00 ~ 22:30 (2시간 반) 게스트 모집합니다. (적어도 두 쿼터에 한 번은 뛰실 수 있습니다.) 실력: 중 모집인원: 2명 (포지션, 성별 상관 없이) ** 이번주 모임에 참석하는 여성분은 현재 없습니다. 게스트비 : 1만원</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5o-MH-t7N">
+                                <rect key="frame" x="20" y="35" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ezY-O9-E7Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fUN-NE-Cse" firstAttribute="centerY" secondItem="o9v-wX-2iN" secondAttribute="centerY" id="6V7-ax-R6F"/>
-                            <constraint firstItem="fUN-NE-Cse" firstAttribute="centerX" secondItem="o9v-wX-2iN" secondAttribute="centerX" id="QA4-vu-vpF"/>
+                            <constraint firstItem="FOP-aX-cd2" firstAttribute="leading" secondItem="ezY-O9-E7Z" secondAttribute="leading" constant="8" id="2M6-n1-Tap"/>
+                            <constraint firstItem="T0v-iq-WJW" firstAttribute="leading" secondItem="ezY-O9-E7Z" secondAttribute="leading" constant="8" id="5B6-Az-njj"/>
+                            <constraint firstItem="YbV-nx-DYy" firstAttribute="top" secondItem="T0v-iq-WJW" secondAttribute="bottom" constant="20" id="6Xq-cR-fAU"/>
+                            <constraint firstItem="YbV-nx-DYy" firstAttribute="leading" secondItem="ezY-O9-E7Z" secondAttribute="leading" constant="8" id="74q-S4-3H2"/>
+                            <constraint firstItem="ezY-O9-E7Z" firstAttribute="trailing" secondItem="T0v-iq-WJW" secondAttribute="trailing" constant="8" id="88X-SD-CoW"/>
+                            <constraint firstItem="25A-Nn-yAX" firstAttribute="leading" secondItem="ezY-O9-E7Z" secondAttribute="leading" constant="8" id="DaF-cy-v1i"/>
+                            <constraint firstItem="FOP-aX-cd2" firstAttribute="top" secondItem="h3e-YH-qVe" secondAttribute="bottom" constant="20" id="Daa-0e-S5r"/>
+                            <constraint firstItem="WIa-CS-FAy" firstAttribute="leading" secondItem="ezY-O9-E7Z" secondAttribute="leading" constant="8" id="Fi9-4P-M4k"/>
+                            <constraint firstItem="h3e-YH-qVe" firstAttribute="leading" secondItem="ezY-O9-E7Z" secondAttribute="leading" constant="8" id="G1p-n9-4NL"/>
+                            <constraint firstItem="25A-Nn-yAX" firstAttribute="top" secondItem="FOP-aX-cd2" secondAttribute="bottom" constant="10" id="IgW-Fb-yze"/>
+                            <constraint firstItem="ezY-O9-E7Z" firstAttribute="trailing" secondItem="25A-Nn-yAX" secondAttribute="trailing" constant="8" id="JF3-ac-iq7"/>
+                            <constraint firstItem="jdo-CE-xmA" firstAttribute="leading" secondItem="ezY-O9-E7Z" secondAttribute="leading" constant="8" id="JLJ-tw-SZp"/>
+                            <constraint firstItem="gbc-Fd-WRc" firstAttribute="top" secondItem="jdo-CE-xmA" secondAttribute="bottom" constant="10" id="Jx3-0C-VGx"/>
+                            <constraint firstItem="ezY-O9-E7Z" firstAttribute="trailing" secondItem="h3e-YH-qVe" secondAttribute="trailing" constant="8" id="OHD-dw-6RK"/>
+                            <constraint firstItem="WIa-CS-FAy" firstAttribute="top" secondItem="YbV-nx-DYy" secondAttribute="bottom" constant="5" id="UUR-OG-TYH"/>
+                            <constraint firstItem="ezY-O9-E7Z" firstAttribute="trailing" secondItem="jdo-CE-xmA" secondAttribute="trailing" constant="8" id="Uj6-n6-4t6"/>
+                            <constraint firstItem="h3e-YH-qVe" firstAttribute="top" secondItem="ezY-O9-E7Z" secondAttribute="top" constant="20" id="UkV-nN-Kx0"/>
+                            <constraint firstItem="ezY-O9-E7Z" firstAttribute="trailing" secondItem="YbV-nx-DYy" secondAttribute="trailing" constant="8" id="cdS-TY-iMg"/>
+                            <constraint firstItem="gbc-Fd-WRc" firstAttribute="leading" secondItem="ezY-O9-E7Z" secondAttribute="leading" constant="8" id="gkY-yU-iCZ"/>
+                            <constraint firstItem="ezY-O9-E7Z" firstAttribute="trailing" secondItem="Ci3-IM-pVw" secondAttribute="trailing" constant="8" id="hLJ-pl-Ywg"/>
+                            <constraint firstItem="doB-2f-TDO" firstAttribute="leading" secondItem="ezY-O9-E7Z" secondAttribute="leading" constant="8" id="kCh-gW-kFZ"/>
+                            <constraint firstItem="ezY-O9-E7Z" firstAttribute="trailing" secondItem="gbc-Fd-WRc" secondAttribute="trailing" constant="8" id="mgu-EL-ZwI"/>
+                            <constraint firstItem="Ci3-IM-pVw" firstAttribute="top" secondItem="doB-2f-TDO" secondAttribute="bottom" constant="20" id="mkg-8m-loE"/>
+                            <constraint firstItem="doB-2f-TDO" firstAttribute="top" secondItem="25A-Nn-yAX" secondAttribute="bottom" constant="5" id="oCh-df-ils"/>
+                            <constraint firstItem="ezY-O9-E7Z" firstAttribute="trailing" secondItem="WIa-CS-FAy" secondAttribute="trailing" constant="8" id="qC6-rd-QlU"/>
+                            <constraint firstItem="ezY-O9-E7Z" firstAttribute="trailing" secondItem="FOP-aX-cd2" secondAttribute="trailing" constant="8" id="qKs-zA-2Fp"/>
+                            <constraint firstItem="ezY-O9-E7Z" firstAttribute="trailing" secondItem="doB-2f-TDO" secondAttribute="trailing" constant="8" id="qrs-sm-3eE"/>
+                            <constraint firstItem="T0v-iq-WJW" firstAttribute="top" secondItem="Ci3-IM-pVw" secondAttribute="bottom" constant="5" id="sA2-Vr-0hw"/>
+                            <constraint firstItem="jdo-CE-xmA" firstAttribute="top" secondItem="WIa-CS-FAy" secondAttribute="bottom" constant="25" id="xN3-dh-IW0"/>
+                            <constraint firstItem="Ci3-IM-pVw" firstAttribute="leading" secondItem="ezY-O9-E7Z" secondAttribute="leading" constant="8" id="ybc-d0-KGi"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="신청하기" id="jpU-iX-3hy"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eo2-2f-a8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="664" y="-392"/>
             <point key="canvasLocation" x="1531.8840579710145" y="-1053.3482142857142"/>
         </scene>
         <!--Tab Bar Controller-->
@@ -285,6 +387,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="농구" width="1242" height="649"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
