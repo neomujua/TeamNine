@@ -235,7 +235,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="농구" translatesAutoresizingMaskIntoConstraints="NO" id="h3e-YH-qVe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="농구" translatesAutoresizingMaskIntoConstraints="NO" id="h3e-YH-qVe">
                                 <rect key="frame" x="8" y="64" width="398" height="233"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="233" id="Lna-bN-sjb"/>
@@ -346,7 +346,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eo2-2f-a8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="664" y="-392"/>
-            <point key="canvasLocation" x="1531.8840579710145" y="-1053.3482142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Jma-xt-iUf">
@@ -391,7 +390,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="농구" width="1242" height="649"/>
+        <image name="농구" width="1242" height="649"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
