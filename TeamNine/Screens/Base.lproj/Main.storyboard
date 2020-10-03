@@ -182,7 +182,7 @@
         <!--Team List View Controller-->
         <scene sceneID="VJG-bA-WBX">
             <objects>
-                <viewController id="abS-ce-NVn" customClass="TeamListViewController" customModule="TeamNine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeamListViewController" id="abS-ce-NVn" customClass="TeamListViewController" customModule="TeamNine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S64-c5-EBy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,11 +203,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="QNN-6E-PuS">
                         <leftBarButtonItems>
-                            <barButtonItem title="Item" id="MwO-cZ-5pm"/>
+                            <barButtonItem title="Item" id="MwO-cZ-5pm">
+                                <connections>
+                                    <action selector="touchSportFilterButton:" destination="abS-ce-NVn" id="0qS-hC-292"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Item" id="S7v-Ar-7Lp"/>
                         </leftBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="sportFilter" destination="MwO-cZ-5pm" id="0XF-Bd-g9z"/>
                         <outlet property="tableView" destination="6eJ-Oq-mca" id="Pwd-HC-RdK"/>
                     </connections>
                 </viewController>
@@ -218,7 +223,7 @@
         <!--View Controller-->
         <scene sceneID="C2U-qE-0vp">
             <objects>
-                <viewController id="cnt-t5-kOv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailTeamViewController" id="cnt-t5-kOv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o9v-wX-2iN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -241,6 +246,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eo2-2f-a8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1531.8840579710145" y="-1053.3482142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Tyd-uk-mg3">
+            <objects>
+                <viewController id="Rhe-53-E3u" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZkQ-Z9-6n5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cM7-6x-QqZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZB-7t-tUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2265" y="-1065"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Jma-xt-iUf">
@@ -267,7 +287,7 @@
         <!--팀리스트-->
         <scene sceneID="vB4-Mh-ICa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VG1-MP-CS5" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TeamListNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="VG1-MP-CS5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="팀리스트" id="mNi-GV-fSQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="B1s-Ri-Ueb">
@@ -281,7 +301,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ft-qe-EVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-142.02898550724638" y="-1053.3482142857142"/>
+            <point key="canvasLocation" x="-113" y="-1053"/>
         </scene>
     </scenes>
     <resources>
