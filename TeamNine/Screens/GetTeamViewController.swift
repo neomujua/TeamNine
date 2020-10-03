@@ -10,21 +10,27 @@ import UIKit
 import Firebase
 
 class GetTeamViewController: UIViewController {
-    @IBOutlet weak var placeTextField: UITextField!
-    @IBOutlet weak var teamSpaceTextField: UITextField!
+//    @IBOutlet weak var placeTextField: UITextField!
+//    @IBOutlet weak var teamSpaceTextField: UITextField!
     @IBOutlet weak var placeImageURL: UITextField!
     @IBOutlet weak var recruitmentTitle: UITextField!
     @IBOutlet weak var matchDate: UITextField!
     @IBOutlet weak var matchTime: UITextField!
     @IBOutlet weak var recruitmentNumber: UITextField!
-    @IBOutlet weak var explanation: UITextField!
+    @IBOutlet weak var content: UITextField!
     
     let teamItemsReference = Database.database().reference(withPath: "team-items")
     
     @IBAction func buttonClicked(_ sender: Any) {
         //let values: [String: Any] = [ "name": "hyunho", "age": 31, "married": false]
-        let values: [String: Any] = [ "place": placeTextField.text, "teamSpace": teamSpaceTextField.text, "owner": "hyunho"]
-        let userItemRef = self.teamItemsReference.child(placeTextField.text ?? "empty")
+        let values: [String: Any] = [ "owner": "userID",
+                                      "image": placeImageURL.text,
+                                      "title": recruitmentTitle.text,
+                                      "date": matchDate.text,
+                                      "time": matchTime.text,
+                                      "recruitmentNumber": recruitmentNumber.text,
+                                      "content": content.text]
+        let userItemRef = self.teamItemsReference.child(recruitmentTitle.text ?? "empty")
         userItemRef.setValue(values)
         
         teamItemsReference.observe(.value, with: {

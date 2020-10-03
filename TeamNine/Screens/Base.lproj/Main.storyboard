@@ -153,6 +153,7 @@
                                 <state key="normal" title="신청하기"/>
                                 <connections>
                                     <action selector="ButtonClicked:" destination="Lkw-fp-4ti" eventType="touchUpInside" id="Hez-WZ-hB0"/>
+                                    <action selector="buttonClicked:" destination="Lkw-fp-4ti" eventType="touchUpInside" id="Sbn-Yv-0Z1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="글 제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vkv-nZ-nFa">
@@ -241,7 +242,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="팀구하기" id="uNx-wp-o7U"/>
                     <connections>
-                        <outlet property="explanation" destination="saR-j2-YA0" id="mWJ-i1-feW"/>
+                        <outlet property="content" destination="saR-j2-YA0" id="XxZ-uA-UKg"/>
                         <outlet property="matchDate" destination="gar-cv-M6f" id="kvo-NM-fMP"/>
                         <outlet property="matchTime" destination="PMK-w3-Wtd" id="GbR-hm-WRG"/>
                         <outlet property="placeImageURL" destination="UXg-7m-vGU" id="0B8-k7-cgj"/>
