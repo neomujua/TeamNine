@@ -32,6 +32,7 @@
 		A5D6F7A82515936500DB1E39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F7A72515936500DB1E39 /* User.swift */; };
 		A5D6F7AD2515941A00DB1E39 /* TeamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F7AC2515941A00DB1E39 /* TeamItem.swift */; };
 		A5FDCBC32510F8100016521C /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDCBC22510F8100016521C /* TeamListViewController.swift */; };
+		DA51A15B2527770F00200289 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51A15A2527770F00200289 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		A5D6F7A72515936500DB1E39 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5D6F7AC2515941A00DB1E39 /* TeamItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamItem.swift; sourceTree = "<group>"; };
 		A5FDCBC22510F8100016521C /* TeamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
+		DA51A15A2527770F00200289 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				A577050825105858001A921C /* Main.storyboard */,
+				DA51A15A2527770F00200289 /* TestViewController.swift */,
 				A5FDCBC22510F8100016521C /* TeamListViewController.swift */,
 				A57705402510F5FD001A921C /* MainController.swift */,
 				A588BD7E2517186D00C6DF69 /* MoreListViewController.swift */,
@@ -398,6 +401,7 @@
 			files = (
 				A588BD89251756A500C6DF69 /* GetTeamViewController.swift in Sources */,
 				A5FDCBC32510F8100016521C /* TeamListViewController.swift in Sources */,
+				DA51A15B2527770F00200289 /* TestViewController.swift in Sources */,
 				A57705412510F5FD001A921C /* MainController.swift in Sources */,
 				A5D6F7A82515936500DB1E39 /* User.swift in Sources */,
 				A5D6F7AD2515941A00DB1E39 /* TeamItem.swift in Sources */,

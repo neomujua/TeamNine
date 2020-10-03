@@ -11,11 +11,13 @@ import Firebase
 
 class TeamListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sportFilter: UIBarButtonItem!
     var countOfchildren: Int = 0
     var teamItems: [TeamItem] = []
     let teamItemsReference = Database.database().reference(withPath: "team-items")
     override func viewDidLoad() {
         super.viewDidLoad()
+        sportFilter.title = "종목"
         view.backgroundColor = .systemBlue
         tableView.register(UINib(nibName: "TeamListCell", bundle: nil), forCellReuseIdentifier: "TeamListCell")
         tableView.backgroundColor = .systemPink
@@ -37,6 +39,10 @@ class TeamListViewController: UIViewController {
             self.teamItems = newItems
             self.tableView.reloadData()
         })
+        
+    }
+    @IBAction func touchSportFilterButton(_ sender: Any) {
+        
     }
     /*
     // MARK: - Navigation

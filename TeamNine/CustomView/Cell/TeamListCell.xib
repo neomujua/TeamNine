@@ -52,6 +52,9 @@
                         </constraints>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                         <state key="normal" title="신청가능"/>
+                        <connections>
+                            <action selector="touchedEnrollButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vu9-J2-5xl"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
