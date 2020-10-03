@@ -20,8 +20,12 @@
 		A588BD612517130400C6DF69 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A588BD602517130400C6DF69 /* FirebaseAuth */; };
 		A588BD632517130400C6DF69 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A588BD622517130400C6DF69 /* FirebaseDatabase */; };
 		A588BD68251713E300C6DF69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A588BD67251713E300C6DF69 /* GoogleService-Info.plist */; };
-		A588BD7F2517186D00C6DF69 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588BD7E2517186D00C6DF69 /* MoreViewController.swift */; };
+		A588BD7F2517186D00C6DF69 /* MoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588BD7E2517186D00C6DF69 /* MoreListViewController.swift */; };
 		A588BD89251756A500C6DF69 /* GetTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588BD88251756A500C6DF69 /* GetTeamViewController.swift */; };
+		A5BF8AEB252852C700F2FDA0 /* MoreListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF8AE9252852C700F2FDA0 /* MoreListCell.swift */; };
+		A5BF8AEC252852C700F2FDA0 /* MoreListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BF8AEA252852C700F2FDA0 /* MoreListCell.xib */; };
+		A5BF8AF2252854CC00F2FDA0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF8AF1252854CC00F2FDA0 /* Constant.swift */; };
+		A5BF8B0925285B6100F2FDA0 /* TableItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF8B0825285B6100F2FDA0 /* TableItemProtocol.swift */; };
 		A5C7ED1B251CEDC50002415B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A5C7ED1A251CEDC50002415B /* .swiftlint.yml */; };
 		A5C7ED34251CF5D50002415B /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C7ED33251CF5D50002415B /* Test.swift */; };
 		A5D6F7A82515936500DB1E39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F7A72515936500DB1E39 /* User.swift */; };
@@ -64,8 +68,12 @@
 		A577053D2510F42D001A921C /* TeamListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamListCell.xib; sourceTree = "<group>"; };
 		A57705402510F5FD001A921C /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		A588BD67251713E300C6DF69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A588BD7E2517186D00C6DF69 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		A588BD7E2517186D00C6DF69 /* MoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreListViewController.swift; sourceTree = "<group>"; };
 		A588BD88251756A500C6DF69 /* GetTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamViewController.swift; sourceTree = "<group>"; };
+		A5BF8AE9252852C700F2FDA0 /* MoreListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreListCell.swift; sourceTree = "<group>"; };
+		A5BF8AEA252852C700F2FDA0 /* MoreListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreListCell.xib; sourceTree = "<group>"; };
+		A5BF8AF1252854CC00F2FDA0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A5BF8B0825285B6100F2FDA0 /* TableItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableItemProtocol.swift; sourceTree = "<group>"; };
 		A5C7ED1A251CEDC50002415B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A5C7ED33251CF5D50002415B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		A5D6F7A72515936500DB1E39 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -124,6 +132,8 @@
 		A577050125105858001A921C /* TeamNine */ = {
 			isa = PBXGroup;
 			children = (
+				A5BF8B0725285B2500F2FDA0 /* Protocol */,
+				A5BF8AF0252854AC00F2FDA0 /* Extension */,
 				A588BD6F2517161100C6DF69 /* CustomView */,
 				A5D6F7A32515934600DB1E39 /* Model */,
 				A57705382510F2A9001A921C /* Screens */,
@@ -162,7 +172,7 @@
 				A577050825105858001A921C /* Main.storyboard */,
 				A5FDCBC22510F8100016521C /* TeamListViewController.swift */,
 				A57705402510F5FD001A921C /* MainController.swift */,
-				A588BD7E2517186D00C6DF69 /* MoreViewController.swift */,
+				A588BD7E2517186D00C6DF69 /* MoreListViewController.swift */,
 				A588BD88251756A500C6DF69 /* GetTeamViewController.swift */,
 				A5C7ED33251CF5D50002415B /* Test.swift */,
 			);
@@ -174,6 +184,8 @@
 			children = (
 				A577053C2510F42D001A921C /* TeamListCell.swift */,
 				A577053D2510F42D001A921C /* TeamListCell.xib */,
+				A5BF8AE9252852C700F2FDA0 /* MoreListCell.swift */,
+				A5BF8AEA252852C700F2FDA0 /* MoreListCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -184,6 +196,22 @@
 				A57705392510F3DD001A921C /* Cell */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		A5BF8AF0252854AC00F2FDA0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF8AF1252854CC00F2FDA0 /* Constant.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A5BF8B0725285B2500F2FDA0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF8B0825285B6100F2FDA0 /* TableItemProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		A5C7ED25251CF39A0002415B /* Frameworks */ = {
@@ -320,6 +348,7 @@
 				A588BD68251713E300C6DF69 /* GoogleService-Info.plist in Resources */,
 				A577050C2510585A001A921C /* Assets.xcassets in Resources */,
 				A577050A25105858001A921C /* Main.storyboard in Resources */,
+				A5BF8AEC252852C700F2FDA0 /* MoreListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,10 +399,13 @@
 				A5D6F7A82515936500DB1E39 /* User.swift in Sources */,
 				A5D6F7AD2515941A00DB1E39 /* TeamItem.swift in Sources */,
 				A577053E2510F42D001A921C /* TeamListCell.swift in Sources */,
-				A588BD7F2517186D00C6DF69 /* MoreViewController.swift in Sources */,
+				A588BD7F2517186D00C6DF69 /* MoreListViewController.swift in Sources */,
+				A5BF8B0925285B6100F2FDA0 /* TableItemProtocol.swift in Sources */,
 				A5C7ED34251CF5D50002415B /* Test.swift in Sources */,
 				A577050325105858001A921C /* AppDelegate.swift in Sources */,
 				A577050525105858001A921C /* SceneDelegate.swift in Sources */,
+				A5BF8AEB252852C700F2FDA0 /* MoreListCell.swift in Sources */,
+				A5BF8AF2252854CC00F2FDA0 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +588,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ysoup.TeamNine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -574,7 +606,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ysoup.TeamNine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

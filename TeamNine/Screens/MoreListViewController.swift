@@ -1,0 +1,49 @@
+//
+//  MoreViewController.swift
+//  TeamNine
+//
+//  Created by 이현호 on 2020/09/20.
+//  Copyright © 2020 이현호. All rights reserved.
+//
+
+import UIKit
+
+class MoreListViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    
+    private var sections: [TableSectionPresentable] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    private func setSection() {
+        var newSections: [TableSectionPresentable] = [PlainSection(title: "섹션제목", items: [PlainItem(title: NSAttributedString(string: "첫번 째 셀"), cellIdentifier: .moreListCell)])]
+        sections = newSections
+        self.tableView.reloadData()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.registerNib(cellIdentifier: .moreListCell)
+        setSection()
+    }
+}
+
+extension MoreListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item: TableItemPresentable = sections[indexPath.section].items[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: item.cellIdentifier.rawValue,
+                                                 for: indexPath)
+        
+        if let displayCell = cell as? TableItemPresenter {
+            displayCell.setDisplayItem(item: item)
+        }
+        
+        return cell
+    }
+}
