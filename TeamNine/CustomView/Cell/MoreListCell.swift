@@ -22,7 +22,7 @@ class MoreListCell: UITableViewCell, TableItemPresenter {
     }
 
     func setDisplayItem(item: TableItemPresentable) {
-        moreTitleLabel.text = "test"
+        moreTitleLabel.text = item.title.string
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

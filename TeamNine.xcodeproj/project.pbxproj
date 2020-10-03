@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5218BED2528911D0046B94A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5218BEC2528911D0046B94A /* ProfileViewController.swift */; };
 		A577050325105858001A921C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A577050225105858001A921C /* AppDelegate.swift */; };
 		A577050525105858001A921C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A577050425105858001A921C /* SceneDelegate.swift */; };
 		A577050A25105858001A921C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A577050825105858001A921C /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5218BEC2528911D0046B94A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A57704FF25105858001A921C /* TeamNine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamNine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A577050225105858001A921C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A577050425105858001A921C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				A57705402510F5FD001A921C /* MainController.swift */,
 				A588BD7E2517186D00C6DF69 /* MoreListViewController.swift */,
 				A588BD88251756A500C6DF69 /* GetTeamViewController.swift */,
+				A5218BEC2528911D0046B94A /* ProfileViewController.swift */,
 				A5C7ED33251CF5D50002415B /* Test.swift */,
 			);
 			path = Screens;
@@ -403,6 +406,7 @@
 				A5BF8B0925285B6100F2FDA0 /* TableItemProtocol.swift in Sources */,
 				A5C7ED34251CF5D50002415B /* Test.swift in Sources */,
 				A577050325105858001A921C /* AppDelegate.swift in Sources */,
+				A5218BED2528911D0046B94A /* ProfileViewController.swift in Sources */,
 				A577050525105858001A921C /* SceneDelegate.swift in Sources */,
 				A5BF8AEB252852C700F2FDA0 /* MoreListCell.swift in Sources */,
 				A5BF8AF2252854CC00F2FDA0 /* Constant.swift in Sources */,
