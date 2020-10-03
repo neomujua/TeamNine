@@ -174,6 +174,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="팀구하기" id="uNx-wp-o7U"/>
+                    <connections>
+                        <outlet property="explanation" destination="saR-j2-YA0" id="mWJ-i1-feW"/>
+                        <outlet property="matchDate" destination="gar-cv-M6f" id="kvo-NM-fMP"/>
+                        <outlet property="matchTime" destination="PMK-w3-Wtd" id="GbR-hm-WRG"/>
+                        <outlet property="placeImageURL" destination="UXg-7m-vGU" id="0B8-k7-cgj"/>
+                        <outlet property="recruitmentNumber" destination="0wb-0t-bfy" id="6yy-5w-2jx"/>
+                        <outlet property="recruitmentTitle" destination="Vkv-nZ-nFa" id="kHP-WT-P4V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZiU-3i-JvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

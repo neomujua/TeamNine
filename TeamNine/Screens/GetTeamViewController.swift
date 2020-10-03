@@ -12,6 +12,12 @@ import Firebase
 class GetTeamViewController: UIViewController {
     @IBOutlet weak var placeTextField: UITextField!
     @IBOutlet weak var teamSpaceTextField: UITextField!
+    @IBOutlet weak var placeImageURL: UITextField!
+    @IBOutlet weak var recruitmentTitle: UITextField!
+    @IBOutlet weak var matchDate: UITextField!
+    @IBOutlet weak var matchTime: UITextField!
+    @IBOutlet weak var recruitmentNumber: UITextField!
+    @IBOutlet weak var explanation: UITextField!
     
     let teamItemsReference = Database.database().reference(withPath: "team-items")
     
