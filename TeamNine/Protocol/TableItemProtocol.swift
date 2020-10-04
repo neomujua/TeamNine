@@ -62,11 +62,12 @@ struct PlainItem: TableItemPresentable {
     var secondaryValue: Any?
     var cellIdentifier: Constant.CellIdentifier
     var action: Any?
+    var imageName: String?
     
-    init(title: NSAttributedString, cellIdentifier: Constant.CellIdentifier, secondaryValue: Any? = nil, action: Any? = nil) {
+    init(title: NSAttributedString, imageName: String? = nil , cellIdentifier: Constant.CellIdentifier,  action: Any? = nil) {
         self.title = title
         self.cellIdentifier = cellIdentifier
-        self.secondaryValue = secondaryValue
+        self.secondaryValue = imageName
         self.action = action
     }
     

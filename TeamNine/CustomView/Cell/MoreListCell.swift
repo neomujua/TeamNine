@@ -22,6 +22,7 @@ class MoreListCell: UITableViewCell, TableItemPresenter {
     }
 
     func setDisplayItem(item: TableItemPresentable) {
+        moreImageView.image = UIImage(named: item.secondaryValue as? String ?? "default")
         moreTitleLabel.text = item.title.string
     }
     

@@ -19,7 +19,7 @@ class MoreListViewController: UIViewController {
     
     private func setSection() {
         var newSections: [TableSectionPresentable] = [PlainSection(title: "섹션제목",
-                                                                   items: [PlainItem(title: NSAttributedString(string: "프로필"), cellIdentifier: .moreListCell),
+                                                                   items: [PlainItem(title: NSAttributedString(string: "프로필"), imageName: "profile" , cellIdentifier: .moreListCell),
                                                                            PlainItem(title: NSAttributedString(string: "오픈소스"), cellIdentifier: .moreListCell),
                                                                            PlainItem(title: NSAttributedString(string: "공유기능"), cellIdentifier: .moreListCell),
                                                                            PlainItem(title: NSAttributedString(string: "설정"), cellIdentifier: .moreListCell)])]
@@ -54,6 +54,8 @@ extension MoreListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item: TableItemPresentable = sections[indexPath.section].items[indexPath.row]
         
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "vcStoaryBoardID")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

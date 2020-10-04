@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A5218BED2528911D0046B94A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5218BEC2528911D0046B94A /* ProfileViewController.swift */; };
+		A5218BFF2528A89C0046B94A /* ProfileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5218BFD2528A89C0046B94A /* ProfileListCell.swift */; };
+		A5218C002528A89C0046B94A /* ProfileListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5218BFE2528A89C0046B94A /* ProfileListCell.xib */; };
 		A577050325105858001A921C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A577050225105858001A921C /* AppDelegate.swift */; };
 		A577050525105858001A921C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A577050425105858001A921C /* SceneDelegate.swift */; };
 		A577050A25105858001A921C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A577050825105858001A921C /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		A5218BEC2528911D0046B94A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A5218BFD2528A89C0046B94A /* ProfileListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListCell.swift; sourceTree = "<group>"; };
+		A5218BFE2528A89C0046B94A /* ProfileListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileListCell.xib; sourceTree = "<group>"; };
 		A57704FF25105858001A921C /* TeamNine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamNine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A577050225105858001A921C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A577050425105858001A921C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 				A577053D2510F42D001A921C /* TeamListCell.xib */,
 				A5BF8AE9252852C700F2FDA0 /* MoreListCell.swift */,
 				A5BF8AEA252852C700F2FDA0 /* MoreListCell.xib */,
+				A5218BFD2528A89C0046B94A /* ProfileListCell.swift */,
+				A5218BFE2528A89C0046B94A /* ProfileListCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5C7ED1B251CEDC50002415B /* .swiftlint.yml in Resources */,
+				A5218C002528A89C0046B94A /* ProfileListCell.xib in Resources */,
 				A577053F2510F42D001A921C /* TeamListCell.xib in Resources */,
 				A577050F2510585A001A921C /* LaunchScreen.storyboard in Resources */,
 				A588BD68251713E300C6DF69 /* GoogleService-Info.plist in Resources */,
@@ -412,6 +419,7 @@
 				A577050325105858001A921C /* AppDelegate.swift in Sources */,
 				A5218BED2528911D0046B94A /* ProfileViewController.swift in Sources */,
 				A577050525105858001A921C /* SceneDelegate.swift in Sources */,
+				A5218BFF2528A89C0046B94A /* ProfileListCell.swift in Sources */,
 				A5BF8AEB252852C700F2FDA0 /* MoreListCell.swift in Sources */,
 				A5BF8AF2252854CC00F2FDA0 /* Constant.swift in Sources */,
 			);
