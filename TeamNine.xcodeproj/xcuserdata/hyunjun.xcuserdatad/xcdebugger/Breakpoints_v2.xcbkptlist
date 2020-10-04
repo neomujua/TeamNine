@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6C537342-0281-4156-A885-254E85B45F5F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C80C048-816F-41E3-8B13-78498E3FFC1E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TeamNine/Screens/GetTeamViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "buttonClicked(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3C80C048-816F-41E3-8B13-78498E3FFC1E - f6329d999d94d496"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TeamNine.GetTeamViewController.buttonClicked(Any) -&gt; ()"
+                  moduleName = "TeamNine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hyunjun/Documents/TeamNine/TeamNine/Screens/GetTeamViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "3886">
+               </Location>
+               <Location
+                  uuid = "3C80C048-816F-41E3-8B13-78498E3FFC1E - d606f6e218df5c61"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in TeamNine.GetTeamViewController.buttonClicked(Any) -&gt; ()"
+                  moduleName = "TeamNine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hyunjun/Documents/TeamNine/TeamNine/Screens/GetTeamViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C2D4589-4D3B-4B5D-BEF1-6328E1DC8567"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TeamNine/Screens/GetTeamViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "buttonClicked(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
