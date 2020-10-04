@@ -66,17 +66,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-AG-zZ2">
+                                <rect key="frame" x="162" y="388" width="103" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="RbW-dX-IXb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uba-mK-WKW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lyE-0F-Xve" firstAttribute="top" secondItem="Uba-mK-WKW" secondAttribute="top" constant="220" id="Y18-ji-F7v"/>
                             <constraint firstItem="lyE-0F-Xve" firstAttribute="leading" secondItem="Uba-mK-WKW" secondAttribute="leading" constant="162" id="aif-6b-E0Y"/>
+                            <constraint firstItem="fqa-AG-zZ2" firstAttribute="top" secondItem="Uba-mK-WKW" secondAttribute="top" constant="300" id="f2N-Lv-P91"/>
+                            <constraint firstItem="fqa-AG-zZ2" firstAttribute="leading" secondItem="Uba-mK-WKW" secondAttribute="leading" constant="162" id="iwA-KM-BN5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s6D-TM-cYY"/>
                     <connections>
                         <outlet property="dataLabel" destination="lyE-0F-Xve" id="aeV-v7-JH6"/>
+                        <outlet property="subLabel" destination="fqa-AG-zZ2" id="fZy-qW-hSA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEb-xP-DsL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

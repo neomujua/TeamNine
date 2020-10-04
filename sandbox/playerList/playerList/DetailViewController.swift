@@ -10,12 +10,16 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var subLabel: UILabel!
+    
     var data: String?
+    var subData: String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
         dataLabel.text = data
+        subLabel.text = subData
         // Do any additional setup after loading the view.
     }
     
