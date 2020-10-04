@@ -37,11 +37,11 @@ class playListTableViewController: UITableViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? DetailViewController {
-            guard let cell = sender as? UITableViewCell else { return }
-            if let index = tableView.indexPath(for: cell){
-                vc.data = data[index.row]
-            }
-        }
+//        if let vc = segue.destination as? DetailViewController {
+//            guard let cell = sender as? UITableViewCell else { return }
+//            if let index = tableView.indexPath(for: cell){
+//                vc.data = data[index.row]
+//            }
+//        }
     }
 }
