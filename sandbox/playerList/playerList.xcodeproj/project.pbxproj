@@ -14,6 +14,7 @@
 		296B1DF525296086000547DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296B1DF425296086000547DF /* Assets.xcassets */; };
 		296B1DF825296086000547DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296B1DF625296086000547DF /* LaunchScreen.storyboard */; };
 		296B1E0125296112000547DF /* playListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B1E0025296112000547DF /* playListTableViewController.swift */; };
+		A5218C0625296B010046B94A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5218C0525296B010046B94A /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		296B1DF725296086000547DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		296B1DF925296086000547DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		296B1E0025296112000547DF /* playListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playListTableViewController.swift; sourceTree = "<group>"; };
+		A5218C0525296B010046B94A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				296B1DF425296086000547DF /* Assets.xcassets */,
 				296B1DF625296086000547DF /* LaunchScreen.storyboard */,
 				296B1DF925296086000547DF /* Info.plist */,
+				A5218C0525296B010046B94A /* DetailViewController.swift */,
 			);
 			path = playerList;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				296B1DF025296085000547DF /* ViewController.swift in Sources */,
 				296B1DEC25296085000547DF /* AppDelegate.swift in Sources */,
+				A5218C0625296B010046B94A /* DetailViewController.swift in Sources */,
 				296B1DEE25296085000547DF /* SceneDelegate.swift in Sources */,
 				296B1E0125296112000547DF /* playListTableViewController.swift in Sources */,
 			);
