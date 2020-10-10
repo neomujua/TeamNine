@@ -4,3 +4,5 @@ for item in data {
     word_array.append(String(describing: item))
 }
 print(word_array)
+
+print(data.map { String($0) })

@@ -21,3 +21,20 @@ for num in array {
 }
 
 print(retArray)
+
+print(array.filter {
+    if $0 == 2 {
+        return true
+    }
+    else if $0 > 2 {
+        for i in 2..<$0 {
+            if $0%i == 0 {
+                return false
+            }
+        }
+    }
+    if $0 == 1 {
+        return false
+    }
+    return true
+})
