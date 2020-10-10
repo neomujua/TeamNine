@@ -8,3 +8,5 @@ for item in data {
     }
 }
 print(total)
+
+print(data.filter{ $0%2 != 0 }.reduce(0){ $0 + $1 })

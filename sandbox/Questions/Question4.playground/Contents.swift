@@ -7,3 +7,6 @@ for (wIndex, w) in width.enumerated() {
 }
 
 print(area)
+
+print(width.map{ $0*$0 })
+//배열 2개 고차함수,,,
