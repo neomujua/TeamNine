@@ -147,28 +147,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD7-zk-0FZ">
-                                <rect key="frame" x="8" y="775" width="398" height="30"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <state key="normal" title="신청하기"/>
-                                <connections>
-                                    <action selector="ButtonClicked:" destination="Lkw-fp-4ti" eventType="touchUpInside" id="Hez-WZ-hB0"/>
-                                    <action selector="buttonClicked:" destination="Lkw-fp-4ti" eventType="touchUpInside" id="Sbn-Yv-0Z1"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="글 제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vkv-nZ-nFa">
                                 <rect key="frame" x="8" y="150" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="keyboardReturnKeyTapped:" destination="Lkw-fp-4ti" eventType="primaryActionTriggered" id="Mby-2M-GMW"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="장소 이미지 URL 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UXg-7m-vGU">
                                 <rect key="frame" x="8" y="108" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
                             </textField>
                             <searchBar contentMode="redraw" placeholder="예) 팀구동 12-3 OO 체육관" translatesAutoresizingMaskIntoConstraints="NO" id="9bm-nP-BUF">
                                 <rect key="frame" x="2" y="192" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search" textContentType="location"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 설정된 장소 : 입력받은 장소 값" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mo5-t7-kv2">
                                 <rect key="frame" x="8" y="256" width="398" height="21"/>
@@ -179,37 +173,43 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY - MM - DD (경기 날짜)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gar-cv-M6f">
                                 <rect key="frame" x="8" y="285" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00:00 ~ 00:00 (경기시간)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-w3-Wtd">
                                 <rect key="frame" x="8" y="327" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0 (모집인원)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-0t-bfy">
                                 <rect key="frame" x="8" y="369" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Dl-f4-tAY">
                                 <rect key="frame" x="8" y="411" width="398" height="402"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="추가 설명을 자유롭게 적어주세요. (참가비/계좌번호/핸드폰번호/당부사항)" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="saR-j2-YA0" userLabel="추가 설명을 자유롭게 적어주세요. (참가비/계좌번호/핸드폰번호/당부사항)">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="402"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="(추가 설명)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yIo-Rf-OKg" userLabel="content">
+                                        <rect key="frame" x="8" y="8" width="382" height="337"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="eea-Ej-hr9" firstAttribute="trailing" secondItem="saR-j2-YA0" secondAttribute="trailing" id="BUY-Ie-xMp"/>
-                                    <constraint firstItem="saR-j2-YA0" firstAttribute="top" secondItem="eea-Ej-hr9" secondAttribute="top" id="Qgb-L2-dHZ"/>
-                                    <constraint firstItem="saR-j2-YA0" firstAttribute="leading" secondItem="eea-Ej-hr9" secondAttribute="leading" id="chg-eo-A9F"/>
-                                    <constraint firstItem="eea-Ej-hr9" firstAttribute="bottom" secondItem="saR-j2-YA0" secondAttribute="bottom" id="wJ2-94-3at"/>
-                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="VU4-rh-3n5"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="eea-Ej-hr9"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD7-zk-0FZ">
+                                <rect key="frame" x="8" y="775" width="398" height="30"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="신청하기"/>
+                                <connections>
+                                    <action selector="ButtonClicked:" destination="Lkw-fp-4ti" eventType="touchUpInside" id="Hez-WZ-hB0"/>
+                                    <action selector="buttonClicked:" destination="Lkw-fp-4ti" eventType="touchUpInside" id="Sbn-Yv-0Z1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yVf-6t-qyb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -242,12 +242,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="팀구하기" id="uNx-wp-o7U"/>
                     <connections>
-                        <outlet property="content" destination="saR-j2-YA0" id="XxZ-uA-UKg"/>
+                        <outlet property="content" destination="yIo-Rf-OKg" id="BjT-dP-fg7"/>
                         <outlet property="matchDate" destination="gar-cv-M6f" id="kvo-NM-fMP"/>
                         <outlet property="matchTime" destination="PMK-w3-Wtd" id="GbR-hm-WRG"/>
                         <outlet property="placeImageURL" destination="UXg-7m-vGU" id="0B8-k7-cgj"/>
                         <outlet property="recruitmentNumber" destination="0wb-0t-bfy" id="6yy-5w-2jx"/>
                         <outlet property="recruitmentTitle" destination="Vkv-nZ-nFa" id="kHP-WT-P4V"/>
+                        <outlet property="searchPlace" destination="9bm-nP-BUF" id="C96-ak-QE2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZiU-3i-JvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

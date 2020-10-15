@@ -14,10 +14,11 @@ class GetTeamViewController: UIViewController {
 //    @IBOutlet weak var teamSpaceTextField: UITextField!
     @IBOutlet weak var placeImageURL: UITextField!
     @IBOutlet weak var recruitmentTitle: UITextField!
+    @IBOutlet weak var searchPlace: UISearchBar!
     @IBOutlet weak var matchDate: UITextField!
     @IBOutlet weak var matchTime: UITextField!
     @IBOutlet weak var recruitmentNumber: UITextField!
-    @IBOutlet weak var content: UITextField!
+    @IBOutlet weak var content: UITextView!
     
     let teamItemsReference = Database.database().reference(withPath: "team-items")
     
@@ -26,6 +27,8 @@ class GetTeamViewController: UIViewController {
         let values: [String: Any] = [ "owner": "userID",
                                       "image": placeImageURL.text,
                                       "title": recruitmentTitle.text,
+                                      "place":
+                                        searchPlace.text,
                                       "date": matchDate.text,
                                       "time": matchTime.text,
                                       "recruitmentNumber": recruitmentNumber.text,
@@ -52,4 +55,12 @@ class GetTeamViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func keyboardReturnKeyTapped(_ sender: UITextField) {
+        if let text = sender.text {
+            print(text)
+        }
+    }
+    
 }
