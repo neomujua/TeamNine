@@ -11,6 +11,9 @@ import UIKit
 enum Constant {
     enum CellIdentifier: String {
         case moreListCell = "MoreListCell"
+        case profileListCell = "ProfileListCell"
+        case settingsListCell = "SettingsListCell"
+        
         var cellClass: AnyClass? {
             return NSClassFromString("teamNine.\(rawValue)")
         }

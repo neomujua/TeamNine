@@ -10,6 +10,7 @@
 		A5218BED2528911D0046B94A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5218BEC2528911D0046B94A /* ProfileViewController.swift */; };
 		A5218BFF2528A89C0046B94A /* ProfileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5218BFD2528A89C0046B94A /* ProfileListCell.swift */; };
 		A5218C002528A89C0046B94A /* ProfileListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5218BFE2528A89C0046B94A /* ProfileListCell.xib */; };
+		A5243DB02538943C00F626FD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5243DAF2538943C00F626FD /* SettingsViewController.swift */; };
 		A577050325105858001A921C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A577050225105858001A921C /* AppDelegate.swift */; };
 		A577050525105858001A921C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A577050425105858001A921C /* SceneDelegate.swift */; };
 		A577050A25105858001A921C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A577050825105858001A921C /* Main.storyboard */; };
@@ -25,6 +26,8 @@
 		A588BD68251713E300C6DF69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A588BD67251713E300C6DF69 /* GoogleService-Info.plist */; };
 		A588BD7F2517186D00C6DF69 /* MoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588BD7E2517186D00C6DF69 /* MoreListViewController.swift */; };
 		A588BD89251756A500C6DF69 /* GetTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588BD88251756A500C6DF69 /* GetTeamViewController.swift */; };
+		A5AA779A25298C950062271F /* MoreView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AA779925298C950062271F /* MoreView.storyboard */; };
+		A5AA77A225298E660062271F /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AA77A125298E660062271F /* Activity.storyboard */; };
 		A5BF8AEB252852C700F2FDA0 /* MoreListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF8AE9252852C700F2FDA0 /* MoreListCell.swift */; };
 		A5BF8AEC252852C700F2FDA0 /* MoreListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BF8AEA252852C700F2FDA0 /* MoreListCell.xib */; };
 		A5BF8AF2252854CC00F2FDA0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF8AF1252854CC00F2FDA0 /* Constant.swift */; };
@@ -58,6 +61,7 @@
 		A5218BEC2528911D0046B94A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A5218BFD2528A89C0046B94A /* ProfileListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListCell.swift; sourceTree = "<group>"; };
 		A5218BFE2528A89C0046B94A /* ProfileListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileListCell.xib; sourceTree = "<group>"; };
+		A5243DAF2538943C00F626FD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A57704FF25105858001A921C /* TeamNine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamNine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A577050225105858001A921C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A577050425105858001A921C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		A588BD67251713E300C6DF69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A588BD7E2517186D00C6DF69 /* MoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreListViewController.swift; sourceTree = "<group>"; };
 		A588BD88251756A500C6DF69 /* GetTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamViewController.swift; sourceTree = "<group>"; };
+		A5AA779925298C950062271F /* MoreView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreView.storyboard; sourceTree = "<group>"; };
+		A5AA77A125298E660062271F /* Activity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
 		A5BF8AE9252852C700F2FDA0 /* MoreListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreListCell.swift; sourceTree = "<group>"; };
 		A5BF8AEA252852C700F2FDA0 /* MoreListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreListCell.xib; sourceTree = "<group>"; };
 		A5BF8AF1252854CC00F2FDA0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -116,6 +122,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5243DAB2538917500F626FD /* More */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA779925298C950062271F /* MoreView.storyboard */,
+				A588BD7E2517186D00C6DF69 /* MoreListViewController.swift */,
+				A5218BEC2528911D0046B94A /* ProfileViewController.swift */,
+				A5243DAF2538943C00F626FD /* SettingsViewController.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		A5762B60253888CA00D0CAC8 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				A5218BFD2528A89C0046B94A /* ProfileListCell.swift */,
+				A5218BFE2528A89C0046B94A /* ProfileListCell.xib */,
+				A5BF8AE9252852C700F2FDA0 /* MoreListCell.swift */,
+				A5BF8AEA252852C700F2FDA0 /* MoreListCell.xib */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		A5762B61253888DC00D0CAC8 /* TeamList */ = {
+			isa = PBXGroup;
+			children = (
+				A577053C2510F42D001A921C /* TeamListCell.swift */,
+				A577053D2510F42D001A921C /* TeamListCell.xib */,
+			);
+			path = TeamList;
+			sourceTree = "<group>";
+		};
 		A57704F625105858001A921C = {
 			isa = PBXGroup;
 			children = (
@@ -177,13 +214,13 @@
 		A57705382510F2A9001A921C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A5243DAB2538917500F626FD /* More */,
 				A577050825105858001A921C /* Main.storyboard */,
+				A5AA77A125298E660062271F /* Activity.storyboard */,
 				DA51A15A2527770F00200289 /* TestViewController.swift */,
 				A5FDCBC22510F8100016521C /* TeamListViewController.swift */,
 				A57705402510F5FD001A921C /* MainController.swift */,
-				A588BD7E2517186D00C6DF69 /* MoreListViewController.swift */,
 				A588BD88251756A500C6DF69 /* GetTeamViewController.swift */,
-				A5218BEC2528911D0046B94A /* ProfileViewController.swift */,
 				A5C7ED33251CF5D50002415B /* Test.swift */,
 			);
 			path = Screens;
@@ -192,12 +229,8 @@
 		A57705392510F3DD001A921C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				A577053C2510F42D001A921C /* TeamListCell.swift */,
-				A577053D2510F42D001A921C /* TeamListCell.xib */,
-				A5BF8AE9252852C700F2FDA0 /* MoreListCell.swift */,
-				A5BF8AEA252852C700F2FDA0 /* MoreListCell.xib */,
-				A5218BFD2528A89C0046B94A /* ProfileListCell.swift */,
-				A5218BFE2528A89C0046B94A /* ProfileListCell.xib */,
+				A5762B61253888DC00D0CAC8 /* TeamList */,
+				A5762B60253888CA00D0CAC8 /* More */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -356,6 +389,8 @@
 			files = (
 				A5C7ED1B251CEDC50002415B /* .swiftlint.yml in Resources */,
 				A5218C002528A89C0046B94A /* ProfileListCell.xib in Resources */,
+				A5AA77A225298E660062271F /* Activity.storyboard in Resources */,
+				A5AA779A25298C950062271F /* MoreView.storyboard in Resources */,
 				A577053F2510F42D001A921C /* TeamListCell.xib in Resources */,
 				A577050F2510585A001A921C /* LaunchScreen.storyboard in Resources */,
 				A588BD68251713E300C6DF69 /* GoogleService-Info.plist in Resources */,
@@ -418,6 +453,7 @@
 				A5C7ED34251CF5D50002415B /* Test.swift in Sources */,
 				A577050325105858001A921C /* AppDelegate.swift in Sources */,
 				A5218BED2528911D0046B94A /* ProfileViewController.swift in Sources */,
+				A5243DB02538943C00F626FD /* SettingsViewController.swift in Sources */,
 				A577050525105858001A921C /* SceneDelegate.swift in Sources */,
 				A5218BFF2528A89C0046B94A /* ProfileListCell.swift in Sources */,
 				A5BF8AEB252852C700F2FDA0 /* MoreListCell.swift in Sources */,

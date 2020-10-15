@@ -10,26 +10,17 @@ import UIKit
 
 class MoreListCell: UITableViewCell, TableItemPresenter {
     var cellIdentifier: Constant.CellIdentifier = .moreListCell
-    var action: EmptyAction?
     
     @IBOutlet weak var moreImageView: UIImageView!
     @IBOutlet weak var moreTitleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        // Initialization code
     }
 
     func setDisplayItem(item: TableItemPresentable) {
+        moreTitleLabel.text = item.title
         moreImageView.image = UIImage(named: item.secondaryValue as? String ?? "default")
-        moreTitleLabel.text = item.title.string
+        
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
