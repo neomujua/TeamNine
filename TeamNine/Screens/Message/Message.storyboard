@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aQe-ff-U7Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ewl-kA-1fb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,21 +9,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--활동-->
-        <scene sceneID="c0m-Ve-seY">
+        <!--메시지-->
+        <scene sceneID="rCP-yg-Yu0">
             <objects>
-                <viewController id="aQe-ff-U7Y" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="It4-dG-Hn1">
+                <viewController id="ewl-kA-1fb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HiS-3f-BpR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="esn-dy-Xhb"/>
+                        <viewLayoutGuide key="safeArea" id="EhL-rp-ynP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="활동" id="kDx-60-TSb"/>
+                    <tabBarItem key="tabBarItem" title="메시지" id="7vi-Gx-XHf"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yqG-2b-aPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUw-fr-R9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="1002"/>
+            <point key="canvasLocation" x="272" y="305"/>
         </scene>
     </scenes>
     <resources>
