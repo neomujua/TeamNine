@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L4V-ej-HHi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Team List View Controller-->
+        <scene sceneID="c3U-pB-85o">
+            <objects>
+                <viewController storyboardIdentifier="TeamListViewController" id="kgz-t2-q3a" customClass="TeamListViewController" customModule="TeamNine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FaI-fA-gJC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mMu-oM-Gvn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dHA-Cu-EDq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mMu-oM-Gvn" firstAttribute="top" secondItem="dHA-Cu-EDq" secondAttribute="top" id="ZsI-XA-aA9"/>
+                            <constraint firstItem="mMu-oM-Gvn" firstAttribute="leading" secondItem="dHA-Cu-EDq" secondAttribute="leading" id="cwx-al-vZx"/>
+                            <constraint firstItem="dHA-Cu-EDq" firstAttribute="bottom" secondItem="mMu-oM-Gvn" secondAttribute="bottom" id="eGb-3l-nff"/>
+                            <constraint firstItem="dHA-Cu-EDq" firstAttribute="trailing" secondItem="mMu-oM-Gvn" secondAttribute="trailing" id="pkP-tc-Pxk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5O5-t8-iWI">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Item" id="vDc-Cq-Kol">
+                                <connections>
+                                    <action selector="touchSportFilterButton:" destination="kgz-t2-q3a" id="Pri-aI-RjX"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" id="GTa-Y9-0Mq"/>
+                        </leftBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sportFilter" destination="vDc-Cq-Kol" id="Ndg-US-mL6"/>
+                        <outlet property="tableView" destination="mMu-oM-Gvn" id="OQ4-gT-n6F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsr-C8-iAj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768.11594202898561" y="-1053.3482142857142"/>
+        </scene>
+        <!--팀리스트-->
+        <scene sceneID="N7V-xL-O7J">
+            <objects>
+                <navigationController storyboardIdentifier="TeamListNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="L4V-ej-HHi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="팀리스트" id="uFQ-ui-eHf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7iO-e0-lUK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kgz-t2-q3a" kind="relationship" relationship="rootViewController" id="Hb2-uM-qYG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Vw-aA-xur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="-1053"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

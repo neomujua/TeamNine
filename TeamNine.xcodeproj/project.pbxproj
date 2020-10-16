@@ -44,6 +44,7 @@
 		A5D6F7AD2515941A00DB1E39 /* TeamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6F7AC2515941A00DB1E39 /* TeamItem.swift */; };
 		A5FDCBC32510F8100016521C /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDCBC22510F8100016521C /* TeamListViewController.swift */; };
 		DA51A15B2527770F00200289 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51A15A2527770F00200289 /* TestViewController.swift */; };
+		DAC36B342539F80400B6E9F5 /* TeamList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC36B332539F80400B6E9F5 /* TeamList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		A5D6F7AC2515941A00DB1E39 /* TeamItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamItem.swift; sourceTree = "<group>"; };
 		A5FDCBC22510F8100016521C /* TeamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
 		DA51A15A2527770F00200289 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		DAC36B332539F80400B6E9F5 /* TeamList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,12 +257,12 @@
 		A57705382510F2A9001A921C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				DAC36B322539F7D600B6E9F5 /* TeamList */,
 				A5243DDC25389FCC00F626FD /* Message */,
 				A5243DC725389DE500F626FD /* Activity */,
 				A5243DAB2538917500F626FD /* More */,
 				A577050825105858001A921C /* Main.storyboard */,
 				DA51A15A2527770F00200289 /* TestViewController.swift */,
-				A5FDCBC22510F8100016521C /* TeamListViewController.swift */,
 				A57705402510F5FD001A921C /* MainController.swift */,
 				A5C7ED33251CF5D50002415B /* Test.swift */,
 			);
@@ -315,6 +317,15 @@
 				A5D6F7AC2515941A00DB1E39 /* TeamItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DAC36B322539F7D600B6E9F5 /* TeamList */ = {
+			isa = PBXGroup;
+			children = (
+				A5FDCBC22510F8100016521C /* TeamListViewController.swift */,
+				DAC36B332539F80400B6E9F5 /* TeamList.storyboard */,
+			);
+			path = TeamList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +447,7 @@
 				A577053F2510F42D001A921C /* TeamListCell.xib in Resources */,
 				A577050F2510585A001A921C /* LaunchScreen.storyboard in Resources */,
 				A5243DD825389FC600F626FD /* Message.storyboard in Resources */,
+				DAC36B342539F80400B6E9F5 /* TeamList.storyboard in Resources */,
 				A5243E042538A9ED00F626FD /* DateTimePicker.xib in Resources */,
 				A588BD68251713E300C6DF69 /* GoogleService-Info.plist in Resources */,
 				A5243DF22538A5CE00F626FD /* GetTeamInputCell.xib in Resources */,
