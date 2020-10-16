@@ -74,4 +74,7 @@ extension TeamListViewController: UITableViewDataSource, UITableViewDelegate {
         print(indexPath.row)
         return cell!
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }
