@@ -75,6 +75,8 @@ extension TeamListViewController: UITableViewDataSource, UITableViewDelegate {
         return cell!
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "teamListDetail") {
+            self.navigationController?.pushViewController(pushVC, animated: true)
+        }
     }
 }
