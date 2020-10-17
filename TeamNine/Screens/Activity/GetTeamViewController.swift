@@ -12,6 +12,7 @@ import Firebase
 class GetTeamViewController: UIViewController {
 //    @IBOutlet weak var placeTextField: UITextField!
 //    @IBOutlet weak var teamSpaceTextField: UITextField!
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var placeImageURL: UITextField!
     @IBOutlet weak var recruitmentTitle: UITextField!
@@ -44,6 +45,9 @@ class GetTeamViewController: UIViewController {
             snapshot in
             print(snapshot)
         })
+    }
+    @IBAction func clickCloseButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
