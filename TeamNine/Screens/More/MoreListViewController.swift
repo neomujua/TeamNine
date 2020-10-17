@@ -19,10 +19,10 @@ class MoreListViewController: UIViewController {
     
     private func setSection() {
         let newSections: [TableSectionPresentable] = [PlainSection(title: "섹션제목",
-                                                                   items: [PlainItem(title: "프로필", imageName: "profile" , cellIdentifier: .moreListCell),
-                                                                           PlainItem(title: "오픈소스", cellIdentifier: .moreListCell),
-                                                                           PlainItem(title: "앱 공유하기", cellIdentifier: .moreListCell),
-                                                                           PlainItem(title: "설정", cellIdentifier: .moreListCell)])]
+                                                                   items: [PlainCell(title: "프로필", imageName: "profile" , cellIdentifier: .moreListCell),
+                                                                           PlainCell(title: "오픈소스", cellIdentifier: .moreListCell),
+                                                                           PlainCell(title: "앱 공유하기", cellIdentifier: .moreListCell),
+                                                                           PlainCell(title: "설정", cellIdentifier: .moreListCell)])]
         sections = newSections
         self.tableView.reloadData()
     }
@@ -40,7 +40,7 @@ extension MoreListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item: TableItemPresentable = sections[indexPath.section].items[indexPath.row]
+        let item: TableCellPresentable = sections[indexPath.section].items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: item.cellIdentifier.rawValue,
                                                  for: indexPath)
         
@@ -52,7 +52,7 @@ extension MoreListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item: TableItemPresentable = sections[indexPath.section].items[indexPath.row]
+        let item: TableCellPresentable = sections[indexPath.section].items[indexPath.row]
         if item.title ==  "프로필" {
             if let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "profileTableView") {
                 self.navigationController?.pushViewController(pushVC, animated: true)

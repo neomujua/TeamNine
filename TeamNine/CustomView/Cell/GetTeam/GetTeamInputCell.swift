@@ -16,7 +16,7 @@ class GetTeamInputCell: UITableViewCell, TableItemPresenter {
         super.awakeFromNib()
     }
 
-    func setDisplayItem(item: TableItemPresentable) {
+    func setDisplayItem(item: TableCellPresentable) {
         placeholerLabel.placeholder = item.title
     }
 }

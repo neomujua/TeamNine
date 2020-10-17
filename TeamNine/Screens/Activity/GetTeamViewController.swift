@@ -59,11 +59,11 @@ class GetTeamViewController: UIViewController {
     
     private func setSection() {
         let newSections: [TableSectionPresentable] = [PlainSection(title: "섹션제목",
-                                                                   items: [PlainItem(title: "장소 이미지 URL 입력", cellIdentifier:               .getTeamInputCell),
-                                                                           PlainItem(title: "글 제목", cellIdentifier: .getTeamInputCell),
-                                                                           PlainItem(title: "추가설명", cellIdentifier: .getTeamInputCell),
-                                                                           PlainItem(title: "", cellIdentifier: .dateTimePicker),
-                                                                           PlainItem(title: "설정", cellIdentifier: .getTeamInputCell)])]
+                                                                   items: [PlainCell(title: "장소 이미지 URL 입력", cellIdentifier:               .getTeamInputCell),
+                                                                           PlainCell(title: "글 제목", cellIdentifier: .getTeamInputCell),
+                                                                           PlainCell(title: "추가설명", cellIdentifier: .getTeamInputCell),
+                                                                           PlainCell(title: "", cellIdentifier: .dateTimePicker),
+                                                                           PlainCell(title: "설정", cellIdentifier: .getTeamInputCell)])]
         sections = newSections
         self.tableView.reloadData()
     }
@@ -75,7 +75,7 @@ extension GetTeamViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item: TableItemPresentable = sections[indexPath.section].items[indexPath.row]
+        let item: TableCellPresentable = sections[indexPath.section].items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: item.cellIdentifier.rawValue,
                                                  for: indexPath)
         
