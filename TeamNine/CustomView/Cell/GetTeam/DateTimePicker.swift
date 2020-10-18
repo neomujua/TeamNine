@@ -16,7 +16,7 @@ class DateTimePicker: UITableViewCell, TableItemPresenter {
         super.awakeFromNib()
     }
 
-    func setDisplayItem(item: TableItemPresentable) {
+    func setDisplayItem(item: TableCellPresentable) {
         //dateTimePicker = .some(UIDatePicker())
     }
 

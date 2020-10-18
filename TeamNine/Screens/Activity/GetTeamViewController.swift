@@ -10,15 +10,10 @@ import UIKit
 import Firebase
 
 class GetTeamViewController: UIViewController {
-//    @IBOutlet weak var placeTextField: UITextField!
-//    @IBOutlet weak var teamSpaceTextField: UITextField!
+
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var placeImageURL: UITextField!
-    @IBOutlet weak var recruitmentTitle: UITextField!
-    @IBOutlet weak var matchDate: UITextField!
-    @IBOutlet weak var matchTime: UITextField!
-    @IBOutlet weak var recruitmentNumber: UITextField!
-    @IBOutlet weak var content: UITextField!
+    @IBOutlet weak var makeTeamButton: UIButton!
+    private var imageURLCell: PlainCell = PlainCell(title: "test", cellIdentifier: .getTeamInputCell)
     
     let teamItemsReference = Database.database().reference(withPath: "team-items")
     
@@ -29,21 +24,56 @@ class GetTeamViewController: UIViewController {
     }
     
     @IBAction func buttonClicked(_ sender: Any) {
-        //let values: [String: Any] = [ "name": "hyunho", "age": 31, "married": false]
-        let values: [String: Any] = [ "owner": "userID",
-                                      "image": placeImageURL.text,
-                                      "title": recruitmentTitle.text,
-                                      "date": matchDate.text,
-                                      "time": matchTime.text,
-                                      "recruitmentNumber": recruitmentNumber.text,
-                                      "content": content.text]
-        let userItemRef = self.teamItemsReference.child(recruitmentTitle.text ?? "empty")
-        userItemRef.setValue(values)
+        tableView.reloadData()
         
+        
+        //let values: [String: Any] = [ "name": "hyunho", "age": 31, "married": false]
+        let values: [String: Any] = [ "address" : "addressTest",
+                                      "contents" : "contentTest",
+                                      "gameCategory" : "gameCategoryTest",
+                                      "gamePlayTime" : 0,
+                                      "gameStartTime" : "gameStartTimeTest",
+                                      "imageUrl": "imageURLCell.imageName",
+                                      "ownerName": "userID",
+                                      "place": "placeTest",
+                                      "teamSize": 1,
+                                      "teamSpace": 2,
+                                      "title": "titleTest",
+                                      ]
+        
+        let userItemRef = self.teamItemsReference.child("teamNameTest" ?? "empty")
+        userItemRef.setValue(values)
+        showAlert()
         teamItemsReference.observe(.value, with: {
             snapshot in
             print(snapshot)
         })
+        
+        
+    }
+    
+    // TODO: - 함수로 만들기
+    private func showAlert() {
+        let alert = UIAlertController(title: "성공!", message: "팀 구하기 업로드를 완료했습니다.", preferredStyle: UIAlertController.Style.alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler : { (action) in
+            self.dismissView() })
+        let cancel = UIAlertAction(title: "cancel", style: .destructive, handler : nil)
+        
+        
+        alert.addAction(cancel)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    private func dismissView() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func clickCloseButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -54,16 +84,16 @@ class GetTeamViewController: UIViewController {
         tableView.registerNib(cellIdentifier: .getTeamInputCell)
         tableView.registerNib(cellIdentifier: .dateTimePicker)
         setSection()
-        // Do any additional setup after loading the view.
     }
     
     private func setSection() {
+        imageURLCell = PlainCell(title: "장소 이미지 URL 입력", cellIdentifier: .getTeamInputCell)
         let newSections: [TableSectionPresentable] = [PlainSection(title: "섹션제목",
-                                                                   items: [PlainItem(title: "장소 이미지 URL 입력", cellIdentifier:               .getTeamInputCell),
-                                                                           PlainItem(title: "글 제목", cellIdentifier: .getTeamInputCell),
-                                                                           PlainItem(title: "추가설명", cellIdentifier: .getTeamInputCell),
-                                                                           PlainItem(title: "", cellIdentifier: .dateTimePicker),
-                                                                           PlainItem(title: "설정", cellIdentifier: .getTeamInputCell)])]
+                                                                   items: [imageURLCell,
+                                                                           PlainCell(title: "글 제목", cellIdentifier: .getTeamInputCell),
+                                                                           PlainCell(title: "추가설명", cellIdentifier: .getTeamInputCell),
+                                                                           PlainCell(title: "", cellIdentifier: .dateTimePicker),
+                                                                           PlainCell(title: "설정", cellIdentifier: .getTeamInputCell)])]
         sections = newSections
         self.tableView.reloadData()
     }
@@ -75,7 +105,7 @@ extension GetTeamViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item: TableItemPresentable = sections[indexPath.section].items[indexPath.row]
+        let item: TableCellPresentable = sections[indexPath.section].items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: item.cellIdentifier.rawValue,
                                                  for: indexPath)
         

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--내 활동-->
         <scene sceneID="c0m-Ve-seY">
             <objects>
                 <viewController id="aQe-ff-U7Y" customClass="ActivityViewController" customModule="TeamNine" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                             <constraint firstItem="HrD-8E-RVO" firstAttribute="top" secondItem="esn-dy-Xhb" secondAttribute="top" id="suX-qg-PUA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="cka-NY-gvd">
+                    <navigationItem key="navigationItem" title="내 활동" id="cka-NY-gvd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CT0-ne-njd">
                             <connections>
                                 <segue destination="Grf-nT-3xp" kind="presentation" id="NBx-4i-iwQ"/>
@@ -55,20 +55,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="czz-Nz-IwG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="688"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgd-bx-fbO">
+                                <rect key="frame" x="376" y="8" width="30" height="30"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="clickCloseButton:" destination="Grf-nT-3xp" eventType="touchUpInside" id="D3f-dY-c7a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51j-4p-0ua">
+                                <rect key="frame" x="0.0" y="738" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="팀 구하기"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="Grf-nT-3xp" eventType="touchUpInside" id="V8I-Y4-nAm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p04-4a-4wf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="czz-Nz-IwG" firstAttribute="top" secondItem="p04-4a-4wf" secondAttribute="top" id="9cs-qb-vb4"/>
-                            <constraint firstItem="p04-4a-4wf" firstAttribute="bottom" secondItem="czz-Nz-IwG" secondAttribute="bottom" id="Akk-R2-twd"/>
+                            <constraint firstItem="51j-4p-0ua" firstAttribute="leading" secondItem="p04-4a-4wf" secondAttribute="leading" id="JWS-QO-gGR"/>
+                            <constraint firstItem="Fgd-bx-fbO" firstAttribute="top" secondItem="p04-4a-4wf" secondAttribute="top" constant="8" id="NMl-0L-FAi"/>
+                            <constraint firstItem="czz-Nz-IwG" firstAttribute="bottom" secondItem="p04-4a-4wf" secondAttribute="bottom" constant="-70" id="NTl-cd-s84"/>
+                            <constraint firstItem="51j-4p-0ua" firstAttribute="top" secondItem="czz-Nz-IwG" secondAttribute="bottom" id="Rub-lH-llL"/>
+                            <constraint firstItem="czz-Nz-IwG" firstAttribute="top" secondItem="p04-4a-4wf" secondAttribute="top" constant="50" id="VyE-fi-4hQ"/>
+                            <constraint firstItem="p04-4a-4wf" firstAttribute="bottom" secondItem="51j-4p-0ua" secondAttribute="bottom" id="ZrN-Qg-2Q2"/>
                             <constraint firstItem="czz-Nz-IwG" firstAttribute="leading" secondItem="p04-4a-4wf" secondAttribute="leading" id="d2m-b7-ZWf"/>
+                            <constraint firstItem="p04-4a-4wf" firstAttribute="trailing" secondItem="Fgd-bx-fbO" secondAttribute="trailing" constant="8" id="mnj-wm-i3y"/>
+                            <constraint firstItem="p04-4a-4wf" firstAttribute="trailing" secondItem="51j-4p-0ua" secondAttribute="trailing" id="nXj-dO-AYe"/>
                             <constraint firstItem="p04-4a-4wf" firstAttribute="trailing" secondItem="czz-Nz-IwG" secondAttribute="trailing" id="qr9-6v-aJd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="makeTeamButton" destination="51j-4p-0ua" id="bfM-Nx-Lnt"/>
                         <outlet property="tableView" destination="czz-Nz-IwG" id="s14-C7-FVg"/>
                     </connections>
                 </viewController>
@@ -223,6 +245,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

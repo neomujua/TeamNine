@@ -32,6 +32,7 @@ class TeamListViewController: UIViewController {
         teamItemsReference.observe(.value, with: { snapshot in
             var newItems: [TeamItem] = []
             for child in snapshot.children {
+                print(child.self)
                 if let snapshot = child as? DataSnapshot, let teamItem = TeamItem(snapshot: snapshot) {
                     newItems.append(teamItem)
                 }

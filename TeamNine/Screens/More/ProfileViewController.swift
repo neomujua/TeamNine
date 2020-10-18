@@ -23,11 +23,11 @@ class ProfileViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         sections = [PlainSection(title: "",
-                                 items: [PlainItem(title: "이름", subtitle: "김민수", cellIdentifier: .profileListCell),
-                                         PlainItem(title: "이메일", subtitle: "minsu@naver.com", cellIdentifier: .profileListCell),
-                                         PlainItem(title: "지역", subtitle: "서울", cellIdentifier: .profileListCell),
-                                         PlainItem(title: "관심 종목", subtitle: "농구", cellIdentifier: .profileListCell),
-                                         PlainItem(title: "유저 레벨", subtitle: "level1", cellIdentifier: .profileListCell)
+                                 items: [PlainCell(title: "이름", subtitle: "김민수", cellIdentifier: .profileListCell),
+                                         PlainCell(title: "이메일", subtitle: "minsu@naver.com", cellIdentifier: .profileListCell),
+                                         PlainCell(title: "지역", subtitle: "서울", cellIdentifier: .profileListCell),
+                                         PlainCell(title: "관심 종목", subtitle: "농구", cellIdentifier: .profileListCell),
+                                         PlainCell(title: "유저 레벨", subtitle: "level1", cellIdentifier: .profileListCell)
                                  ])]
     }
 }
@@ -38,7 +38,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item: TableItemPresentable = sections[indexPath.section].items[indexPath.row]
+        let item: TableCellPresentable = sections[indexPath.section].items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: item.cellIdentifier.rawValue,
                                                  for: indexPath)
         

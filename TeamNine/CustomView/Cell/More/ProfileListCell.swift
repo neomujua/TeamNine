@@ -19,7 +19,7 @@ class ProfileListCell: UITableViewCell, TableItemPresenter {
         // Initialization code
     }
 
-    func setDisplayItem(item: TableItemPresentable) {
+    func setDisplayItem(item: TableCellPresentable) {
         profileTitleLabel.text = item.title
         profileContentText.text = item.subtitle
     }

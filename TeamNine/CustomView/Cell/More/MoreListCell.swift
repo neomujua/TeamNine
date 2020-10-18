@@ -18,9 +18,9 @@ class MoreListCell: UITableViewCell, TableItemPresenter {
         super.awakeFromNib()
     }
 
-    func setDisplayItem(item: TableItemPresentable) {
+    func setDisplayItem(item: TableCellPresentable) {
         moreTitleLabel.text = item.title
-        moreImageView.image = UIImage(named: item.secondaryValue as? String ?? "default")
+        moreImageView.image = UIImage(named: item.imageName ?? "default")
         
     }
 }
