@@ -32,16 +32,16 @@ class GetTeamViewController: UIViewController {
                                       "contents" : "contentTest",
                                       "gameCategory" : "gameCategoryTest",
                                       "gamePlayTime" : 0,
-                                      "gameStartTime" : "gameStartTimeTest",
+                                      "gameStartTime" : "11:21",
                                       "imageUrl": "imageURLCell.imageName",
                                       "ownerName": "userID",
                                       "place": "placeTest",
                                       "teamSize": 1,
                                       "teamSpace": 2,
-                                      "title": "titleTest",
+                                      "title": "제목입니다",
                                       ]
         
-        let userItemRef = self.teamItemsReference.child("teamNameTest" ?? "empty")
+        let userItemRef = self.teamItemsReference.child("teamNameTest" + String(Int.random(in: 1...1000)) ?? "empty")
         userItemRef.setValue(values)
         showAlert()
         teamItemsReference.observe(.value, with: {
