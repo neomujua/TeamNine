@@ -10,8 +10,8 @@ import Foundation
 import Firebase
 
 struct TeamItem {
-    let ref: DatabaseReference?
-    let key: String
+    //let ref: DatabaseReference?
+    //let key: String
     let title: String
     let contents: String?
     let gameStartTime: String?
@@ -23,6 +23,7 @@ struct TeamItem {
     let gameCategory: String
     let imageUrl: String
     let ownerName: String
+    
     //데이터스냅샷을 받아와서 그 데이터로 설정해주는 코드입니다.
     init?(snapshot: DataSnapshot) {
         guard
@@ -37,11 +38,23 @@ struct TeamItem {
             let teamSpace = value["teamSpace"] as? Int,
             let gameCategory = value["gameCategory"] as? String,
             let imageUrl = value["imageUrl"] as? String,
-            let ownerName = value["ownerName"] as? String else {
-            return nil
-        }
-        self.ref = snapshot.ref
-        self.key = snapshot.key
+            let ownerName = value["ownerName"] as? String else { return nil}
+        //self.ref = snapshot.ref
+        //self.key = snapshot.key
+        self.title = title
+        self.contents = contents
+        self.gameStartTime = gameStartTime
+        self.gamePlayTime = gamePlayTime
+        self.place = place
+        self.address = address
+        self.teamSize = teamSize
+        self.teamSpace = teamSpace
+        self.gameCategory = gameCategory
+        self.imageUrl = imageUrl
+        self.ownerName = ownerName
+    }
+    
+    init (title:String, contents: String?, gameStartTime: String?, gamePlayTime: Int, place: String, address: String?, teamSize: Int, teamSpace: Int, gameCategory: String, imageUrl: String, ownerName: String) {
         self.title = title
         self.contents = contents
         self.gameStartTime = gameStartTime
